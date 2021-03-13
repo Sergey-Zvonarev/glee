@@ -3,7 +3,101 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+    }
+}
 
+.menu {
+    margin-left: 154px;
+    &__list {
+        display: flex;
+    }
 
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 34px;
+        }
+    }
+
+    &__link {
+        @extend %rubik-700;
+        color: $link;
+        transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #ffffff;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &--search {
+            background-color: #edf1f4;
+        }
+
+        &--basket {
+            justify-content: space-evenly;
+            width: 177px;
+            border-radius: 100px;
+            background-color: $accent;
+        }
+
+        &--menu {
+            background-color: #a3bbc8;
+        }
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    &__num {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #ffffff;
+
+        font-family: 'DM Sans', sans-serif;
+        font-size: 10px;
+        text-align: center;
+    }
+}
 
 @import 'media';

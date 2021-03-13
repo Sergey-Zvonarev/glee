@@ -20,7 +20,7 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Home+</a>
+                            <a class="menu__link menu__link--active" href="#">Home+</a>
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="#">About</a>
@@ -40,29 +40,32 @@
                     </ul>
                 </nav>
                 <div class="user-nav">
-                    <div class="user-nav__box">
-                        <a class="user-nav__link" href="#"></a>
-                    </div>
-                    <div class="user-nav__box">
+                    <div class="user-nav__box user-nav__box--search">
                         <a class="user-nav__link" href="#">
-                            <div class="user-nav__num">0</div>
+                            <img class="user-nav__icon" src="images/icons/icon-search.svg" alt="icon search">
                         </a>
                     </div>
-                    <div class="user-nav__box">
+                    <div class="user-nav__box user-nav__box--basket">
                         <a class="user-nav__link" href="#">
-                            <div class="user-nav__num">0</div>
+                            <img class="user-nav__icon" src="images/icons/icon-heart.svg" alt="icon heart">
+                            <span class="user-nav__num">0</span>
+                        </a>
+                        <span>|</span>
+                        <a class="user-nav__link" href="#">
+                            <img class="user-nav__icon" src="images/icons/icon-basket.svg" alt="icon basket">
+                            <span class="user-nav__num">0</span>
                         </a>
                     </div>
-                    <div class="user-nav__box">
-                        <a class="user-nav__link" href="#"></a>
+                    <div class="user-nav__box user-nav__box--menu">
+                        <a class="user-nav__link" href="#">
+                            <img class="user-nav__icon" src="images/icons/icon-ellipse.svg" alt="icon menu">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-
-    
     <script src="js/main.min.js"></script>
 </body>
 
