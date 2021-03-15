@@ -1,8 +1,20 @@
+html,
 body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
     @extend %rubik-400;
     font-size: 16px;
     color: $default;
     line-height: 1.9;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .container {
@@ -11,9 +23,15 @@ body {
     padding: 0 15px;
 }
 
+.min__container {
+    max-width: 1170px;
+    margin: 0 auto; 
+}
+
 .visually-hidden {
     position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0 !important;
     border: 0 !important;
@@ -22,3 +40,23 @@ body {
     overflow: hidden;
 }
 
+.btn {
+    background-color: $btn;
+    font-size: 15px;
+    color: #ffffff;
+    transition: color 0.5s, background-color 0.5s;
+
+    &:hover {
+        color: $accent;
+        background-color: #477b97;
+    }
+
+    &:active {
+        background-color: $default;
+    }
+
+    &:focus {
+        outline: transparent;
+        box-shadow: 0 0 0 1px $default;
+    }
+}

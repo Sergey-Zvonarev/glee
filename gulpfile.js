@@ -52,6 +52,7 @@ function styles() {
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/slick-carousel/slick/slick.min.js', //установка slick-slidera, но перед эти установить npm i slick-carousel --save-dev
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))

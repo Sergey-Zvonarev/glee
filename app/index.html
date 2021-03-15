@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>glee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -41,31 +42,238 @@
                 </nav>
                 <div class="user-nav">
                     <div class="user-nav__box user-nav__box--search">
-                        <a class="user-nav__link" href="#">
-                            <img class="user-nav__icon" src="images/icons/icon-search.svg" alt="icon search">
+                        <a class="user-nav__link  user-nav__link--search" href="#">
+                            <span class="visually-hidden">Иконка поиск</span>
                         </a>
                     </div>
                     <div class="user-nav__box user-nav__box--basket">
-                        <a class="user-nav__link" href="#">
-                            <img class="user-nav__icon" src="images/icons/icon-heart.svg" alt="icon heart">
+                        <a class="user-nav__link user-nav__link--heart" href="#">
+                            <span class="visually-hidden">Иконка избранное</span>
                             <span class="user-nav__num">0</span>
                         </a>
-                        <span>|</span>
-                        <a class="user-nav__link" href="#">
-                            <img class="user-nav__icon" src="images/icons/icon-basket.svg" alt="icon basket">
+                        <span class="user-nav__rectangle"></span>
+                        <a class="user-nav__link user-nav__link--basket" href="#">
+                            <span class="visually-hidden">Иконка корзина</span>
                             <span class="user-nav__num">0</span>
                         </a>
                     </div>
                     <div class="user-nav__box user-nav__box--menu">
-                        <a class="user-nav__link" href="#">
-                            <img class="user-nav__icon" src="images/icons/icon-ellipse.svg" alt="icon menu">
+                        <a class="user-nav__link user-nav__link--menu" href="#">
+                            <span class="visually-hidden">Иконка меню</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+<main class="main">
+    <section class="trendy">
+        <div class="container">
+            <ul class="trendy__slider">
+                <li class="trendy__item">
+                    <div class="trendy__content">
+                        <h1 class="trendy__title">
+                            Smart and trendy
+                        </h1>
+                        <p class="trendy__text">
+                            Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <a class="btn trendy__link" href="#">
+                            Shop Now
+                        </a>
 
+                    </div>
+                </li>
+                <li class="trendy__item">
+                    <div class="trendy__content">
+                        <h1 class="trendy__title">
+                            Smart and trendy
+                        </h1>
+                        <p class="trendy__text">
+                            Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <a class="btn trendy__link" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </li>
+                <li class="trendy__item">
+                    <div class="trendy__content">
+                        <h1 class="trendy__title">
+                            Smart and trendy
+                        </h1>
+                        <p class="trendy__text">
+                            Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <a class="btn trendy__link" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="trendy__info">
+                <div class="trendy__info-item trendy__info-item--support">
+                    <div class="trendy__info-title">
+                        Support 24/7
+                    </div>
+                    <p>Contact us 24 hours a day, 7 days a week.</p>
+                </div>
+
+                <div class="trendy__info-item trendy__info-item--delivery">
+                    <div class="trendy__info-title">
+                        Delivery
+                    </div>
+                    <p>Free shipping on all US order.</p>
+                </div>
+
+                <div class="trendy__info-item trendy__info-item--payment">
+                    <div class="trendy__info-title">
+                        100% Payment secure.
+                    </div>
+                    <p>We ensure secure payment with PEV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>  
+
+    <footer class="footer">
+        <div class="container">
+            <div class="min__container">
+                <div class="footer-top">
+    
+                    <address class="footer-top__list">
+                        <a class="logo footer-top__logo" href="#">
+                            <img class="logo__image" src="images/logo.png" alt="logo">
+                        </a>
+                        <ul class="footer-top__items">
+                            <li class="footer-top__item footer-top__item--addres">
+                                <span class="footer-top__connection">Address:</span>
+                                <a class="footer-top__item-link " href="#">
+                                    4772 Wines Lane
+                                    Houston, TX 77032
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <span class="footer-top__connection">Telephone:</span>
+                                <a class="footer-top__item-link" href="tel: +8323475843">
+                                    +832-347-5843
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <span class="footer-top__connection">Email:</span>
+                                <a class="footer-top__item-link" href="mailto: contact@Glee.com">
+                                    contact@Glee.com
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+    
+                    <div class="footer-top__list">
+                        <div class="footer-top__title">
+                            Services
+                        </div>
+                        <ul class="footer-top__items">
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    About us
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Return Policy
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Our Blog
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Terms & Condition
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-top__list">
+                        <div class="footer-top__title">
+                            Account
+                        </div>
+                        <ul class="footer-top__items">
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Your Account
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Checkout
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Login
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__item-link" href="#">
+                                    Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-top__list">
+                        <div class="footer-top__title">
+                            Newsletter
+                        </div>
+                        <p class="footer-top__item-text" href="#">
+                            Subscribe by our newsletter and get
+                            update protidin.
+                        </p>
+    
+                        <form class="footer-top__form" action="#">
+                            <label>
+                                <input class="footer-top__input"type="text" placeholder="Email address" required>
+                            </label>
+                            <button class="btn footer-top__btn" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <p class="footer-bottom__copyright">
+                        ©2020 CopyRight Example. All rights reserved.
+                    </p>
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__item">
+                            <a href="#" class="footer-bottom__link">Home</a>
+                        </li>
+                        <li class="footer-bottom__item">
+                            <a href="#" class="footer-bottom__link">About</a>
+                        </li>
+                        <li class="footer-bottom__item">
+                            <a href="#" class="footer-bottom__link">Blog</a>
+                        </li>
+                        <li class="footer-bottom__item">
+                            <a href="#" class="footer-bottom__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://use.fontawesome.com/e39947fd7e.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
