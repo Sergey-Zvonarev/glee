@@ -1,4 +1,4 @@
-@import 'slick';
+@import 'libs';
 @import 'vars';
 @import 'fonts';
 @import 'reset';
@@ -23,7 +23,7 @@
     &__item {
 
         &:not(:last-child) {
-            margin-right: 34px;
+            margin-right: 30px;
         }
     }
 
@@ -56,7 +56,6 @@
         justify-content: center;
         align-items: center;
 
-        background-color: red;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -173,7 +172,6 @@
     }
 
     &__item {
-        background-image: url('../images/trendy__slide.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -384,9 +382,9 @@
                 color: #234969;
             }
 
-             &:hover {
-                 background-color: $accent;
-             }
+            &:hover {
+                background-color: $accent;
+            }
         }
 
         &__btn {
@@ -412,12 +410,11 @@
         }
 
         &__item {
-            padding-left: 18px;
-
+            padding-left: 16px;
 
             &:not(:last-child) {
                 border-right: 1px solid #7b7b7b;
-                padding-right: 18px;
+                padding-right: 16px;
             }
         }
 
@@ -442,6 +439,149 @@
     }
 }
 
+
+// ==================PRODUCTS=================
+
+
+.products {
+    padding: 53px 0 80px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 75px;
+    }
+
+    &__element {
+
+        &:not(:last-child) {
+            margin-right: 19px;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        color: $filter-btn;
+        cursor: pointer;
+        @extend %dmsans-700;
+        transition: color 0.5s;
+
+        &:hover {
+            color: #1a1a1a;
+        }
+
+        &--active {
+            color: #1a1a1a;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__card {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 270px;
+        min-height: 380px;
+        border-radius: 10px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        padding: 23px 20px 30px;
+        margin-bottom: 38px;
+        margin-right: 30px;
+    }
+
+    &__image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 210px;
+        width: 238px;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+
+    &__picture {
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    &__name {
+        @extend %dmsans-500;
+        color: $default;
+        line-height: 2.2;
+        text-align: center;
+    }
+
+    &__price {
+        display: block;
+        color: $btn;
+    }
+
+    &__nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .products__card:hover .products__nav {
+        opacity: 1;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: 14px;
+        }
+
+        &--search {
+            background-image: url('../images/icons/icon-search-blue.svg');
+        }
+
+        &--active {
+            background-color: $btn;
+            background-image: url('../images/icons/icon-basket-white.svg');
+        }
+
+        &--heart {
+            background-image: url('../images/icons/icon-heart-blue2.svg');
+        }
+    }
+
+
+}
+
+// =================PRODUCTS END==============
 
 
 @import 'media';

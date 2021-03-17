@@ -53,6 +53,7 @@ function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
             'node_modules/slick-carousel/slick/slick.min.js', //установка slick-slidera, но перед эти установить npm i slick-carousel --save-dev
+            'node_modules/mixitup/dist/mixitup.min.js', //установка mixitup, но перед эти установить npm i mixitup --save-dev
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
