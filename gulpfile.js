@@ -5,13 +5,13 @@ const {
     parallel,
     series
 } = require('gulp');
-const scss              = require('gulp-sass');
-const concat            = require('gulp-concat'); //минификация css файлов
-const autoprefixer      = require('gulp-autoprefixer'); //добавление автопрефиксов
-const uglify            = require('gulp-uglify'); //минификация JS-файлов
-const browserSync       = require('browser-sync').create(); //автообновление HTML-страницы
-const imagemin          = require('gulp-imagemin'); //сжатие картинки
-const del               = require('del'); //удаление папочки dist перед build
+const scss = require('gulp-sass');
+const concat = require('gulp-concat'); //минификация css файлов
+const autoprefixer = require('gulp-autoprefixer'); //добавление автопрефиксов
+const uglify = require('gulp-uglify'); //минификация JS-файлов
+const browserSync = require('browser-sync').create(); //автообновление HTML-страницы
+const imagemin = require('gulp-imagemin'); //сжатие картинки
+const del = require('del'); //удаление папочки dist перед build
 
 
 //=============начало===========
@@ -54,6 +54,7 @@ function scripts() {
             'node_modules/jquery/dist/jquery.js',
             'node_modules/slick-carousel/slick/slick.min.js', //установка slick-slidera, но перед эти установить npm i slick-carousel --save-dev
             'node_modules/mixitup/dist/mixitup.min.js', //установка mixitup, но перед эти установить npm i mixitup --save-dev
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.js', //установка magnific, но перед эти установить  npm install magnific-popup --save-dev
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
@@ -68,13 +69,23 @@ function scripts() {
 function images() {
     return src('app/images/**/*.*')
         .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 75, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.gifsicle({
+                interlaced: true
+            }),
+            imagemin.mozjpeg({
+                quality: 75,
+                progressive: true
+            }),
+            imagemin.optipng({
+                optimizationLevel: 5
+            }),
             imagemin.svgo({
-                plugins: [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
+                plugins: [{
+                        removeViewBox: true
+                    },
+                    {
+                        cleanupIDs: false
+                    }
                 ]
             })
         ]))
@@ -87,11 +98,13 @@ function images() {
 //Файлы, которые должно попасть в финальный проект т.е. папку dist
 function build() {
     return src([
-        'app/**/*.html',
-        'app/css/style.min.css',
-        'app/js/main.min.js'
-    ], {base: 'app'}) //перенести с теми же папками в которых  и были
-    .pipe(dest('dist'))
+            'app/**/*.html',
+            'app/css/style.min.css',
+            'app/js/main.min.js'
+        ], {
+            base: 'app'
+        }) //перенести с теми же папками в которых  и были
+        .pipe(dest('dist'))
 }
 
 function cleanDist() {

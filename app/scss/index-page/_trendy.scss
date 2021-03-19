@@ -1,0 +1,188 @@
+.trendy {
+    .slick-dots {
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+
+        display: flex;
+        transform: translateX(-50%);
+
+        li {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            &.slick-active {
+                button {
+                    background-color: $bg;
+                    opacity: 1;
+                }
+            }
+        }
+
+        button {
+            background-color: rgba(#ffffff, 0.5);
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 1;
+            color: $default;
+            font-size: 10px;
+            opacity: 0.5;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background-color: $accent;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 192px;
+            z-index: 0;
+            background-image: url('../images/decor/ellips-slider.png');
+            width: 610px;
+            height: 634px;
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 820px;
+        max-width: 430px;
+        margin-left: 300px;
+        padding-bottom: 74px;
+        margin-right: 100px;
+    }
+
+    &__title {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        text-transform: uppercase;
+        font-size: 72px;
+        color: rgb(36, 63, 77);
+        line-height: 1;
+        margin-bottom: 28px;
+        @extend %rubik-500;
+    }
+
+    &__text {
+
+        font-size: 18px;
+        color: $link;
+        line-height: 1.7;
+        margin-bottom: 35px;
+        max-width: 364px;
+    }
+
+    &__link {
+        position: relative;
+
+        padding: 18px 60px 13px 27px;
+        max-width: 202px;
+
+        &::after {
+            content: '';
+            background-image: url('../images/icons/arrow-right.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 22px;
+            height: 9px;
+            position: absolute;
+            top: 27px;
+            right: 18px;
+        }
+
+        &:hover::after {
+            background-image: url('../images/icons/arrow-right_hover.svg')
+        }
+    }
+
+    &__image {
+        position: relative;
+    }
+
+    &__picture {
+        width: 645px;
+        height: 264px;
+        object-fit: contain;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        position: relative;
+        width: 33.4%;
+        padding: 35px 50px 35px 224px;
+        background-color: $info;
+
+        &:not(:last-child) {
+            border-right: 1px solid #e8e4df;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 147px;
+
+            width: 55px;
+            height: 55px;
+            background-repeat: no-repeat;
+        }
+
+        &--support {
+
+            &::before {
+                background-image: url('../images/support.svg');
+            }
+        }
+
+        &--delivery {
+
+            &::before {
+                background-image: url('../images/delivery.svg');
+                top: 56px;
+                left: 138px;
+            }
+        }
+
+        &--payment::before {
+            background-image: url('../images/payment.svg');
+        }
+    }
+
+    &__text {
+        max-width: 222px;
+        @extend %dmsans-400;
+        color: $text;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        color: #414141;
+        font-size: 18px;
+        line-height: 2.2;
+    }
+}

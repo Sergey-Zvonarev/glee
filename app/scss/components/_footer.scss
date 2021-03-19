@@ -1,0 +1,120 @@
+.footer {
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 75px 0 64px;
+        border-bottom: 1px solid #dae4e9;
+    }
+
+    &__list {
+        max-width: 300px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 13px;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        color: rgb(31, 32, 68);
+        text-transform: uppercase;
+        line-height: 1.3;
+        margin-bottom: 14px;
+        padding-top: 18px;
+    }
+
+    &__connection {
+        font-size: 14px;
+        @extend %rubik-400;
+        color: $connection;
+        line-height: 2.3;
+        font-style: normal;
+        text-transform: uppercase;
+    }
+
+    &__item--addres {
+        max-width: 185px;
+    }
+
+
+    &__item-link,
+    &__item-text {
+        font-size: 14px;
+        @extend %rubik-400;
+        color: $connection;
+        line-height: 2.3;
+        font-style: normal;
+        transition: color 0.5s, background-color 0.5s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
+    }
+
+    &__item-text {
+        margin-bottom: 33px;
+        line-height: 1.9;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 33px 0 40px;
+        font-size: 14px;
+        color: $connection;
+    }
+
+    .menu__list {
+        display: flex;
+        line-height: 1;
+    }
+
+    .menu__item {
+        padding-left: 16px;
+
+        &:not(:last-child) {
+            border-right: 1px solid $connection;
+            padding-right: 16px;
+            margin: 0;
+        }
+    }
+
+    .menu__link {
+        color: $connection;
+        transition: color 0.5s, background-color 0.5s;
+        @extend %rubik-400;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
+    }
+}

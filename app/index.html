@@ -15,10 +15,11 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a class="logo" href="#">
-                    <img class="logo__image" src="images/logo.png" alt="logo">
-                </a>
                 <nav class="menu">
+                    <a class="logo header__logo" href="#">
+                        <img class="logo__image" src="images/logo.png" alt="logo">
+                    </a>
+
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a class="menu__link menu__link--active" href="#">Home+</a>
@@ -39,502 +40,571 @@
                             <a class="menu__link" href="#">Contact</a>
                         </li>
                     </ul>
+
+                    <div class="user-nav">
+                        <div class="user-nav__box user-nav__box--search">
+                            <button class="user-nav__btn  user-nav__btn--search" type="button">
+                                <span class="visually-hidden">Иконка поиск</span>
+                            </button>
+                        </div>
+
+
+                        <div class="user-nav__inner">
+                            <span class="user-nav__rectangle"></span>
+                            <div class="user-nav__box user-nav__box--heart">
+                                <button class="user-nav__btn user-nav__btn--heart" type="button">
+                                    <span class="visually-hidden">Иконка избранное</span>
+                                    <span class="user-nav__num">0</span>
+                                </button>
+                            </div>
+                            <div class="user-nav__box user-nav__box--basket">
+                                <button class="user-nav__btn user-nav__btn--basket" type="button">
+                                    <span class="visually-hidden">Иконка корзина</span>
+                                    <span class="user-nav__num">0</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="user-nav__box user-nav__box--menu">
+                            <button class="user-nav__btn user-nav__btn--menu" type="button">
+                                <span class="visually-hidden">Иконка меню</span>
+                            </button>
+                        </div>
+                    </div>
                 </nav>
-                <div class="user-nav">
-                    <div class="user-nav__box user-nav__box--search">
-                        <a class="user-nav__link  user-nav__link--search" href="#">
-                            <span class="visually-hidden">Иконка поиск</span>
-                        </a>
-                    </div>
-                    <div class="user-nav__box user-nav__box--basket">
-                        <a class="user-nav__link user-nav__link--heart" href="#">
-                            <span class="visually-hidden">Иконка избранное</span>
-                            <span class="user-nav__num">0</span>
-                        </a>
-                        <span class="user-nav__rectangle"></span>
-                        <a class="user-nav__link user-nav__link--basket" href="#">
-                            <span class="visually-hidden">Иконка корзина</span>
-                            <span class="user-nav__num">0</span>
-                        </a>
-                    </div>
-                    <div class="user-nav__box user-nav__box--menu">
-                        <a class="user-nav__link user-nav__link--menu" href="#">
-                            <span class="visually-hidden">Иконка меню</span>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
 
     <main class="main">
+        <h1 class="visually-hidden">
+            Glee home page online furniture store
+        </h1>
 
         <section class="trendy">
             <div class="container">
                 <ul class="trendy__slider">
-                    <li class="trendy__item" style="background-image: url('images/trendy__slide.jpg');">
-                        <div class="trendy__content">
-                            <h1 class="trendy__title">
-                                Smart and trendy
-                            </h1>
-                            <p class="trendy__text">
-                                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            </p>
-                            <a class="btn trendy__link" href="#">
-                                Shop Now
-                            </a>
+                    <li class="trendy__item">
+                        <div class="trendy__inner">
+                            <div class="trendy__content">
+                                <div class="trendy__title">
+                                    Smart and trendy
+                                </div>
+                                <div class="trendy__text">
+                                    <p>
+                                        Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                    </p>
+                                </div>
+                                <a class="btn trendy__link" href="#">
+                                    Shop Now
+                                </a>
+                            </div>
+                            <div class="trendy__image">
+                                <img class="trendy__picture" src="images/products/divan-slider.png"
+                                    alt="Smart and trendy">
+                            </div>
 
                         </div>
                     </li>
-                    <li class="trendy__item" style="background-image: url('images/trendy__slide.jpg');">
-                        <div class="trendy__content">
-                            <h1 class="trendy__title">
-                                Smart and trendy
-                            </h1>
-                            <p class="trendy__text">
-                                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            </p>
-                            <a class="btn trendy__link" href="#">
-                                Shop Now
-                            </a>
+                    <li class="trendy__item">
+                        <div class="trendy__inner">
+                            <div class="trendy__content">
+                                <div class="trendy__title">
+                                    Smart and trendy
+                                </div>
+                                <div class="trendy__text">
+                                    <p>
+                                        Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                    </p>
+                                </div>
+                                <a class="btn trendy__link" href="#">
+                                    Shop Now
+                                </a>
+                            </div>
+                            <div class="trendy__image">
+                                <img class="trendy__picture" src="images/products/divan-slider.png"
+                                    alt="Smart and trendy">
+                            </div>
+
                         </div>
                     </li>
-                    <li class="trendy__item" style="background-image: url('images/trendy__slide.jpg');">
-                        <div class="trendy__content">
-                            <h1 class="trendy__title">
-                                Smart and trendy
-                            </h1>
-                            <p class="trendy__text">
-                                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            </p>
-                            <a class="btn trendy__link" href="#">
-                                Shop Now
-                            </a>
+                    <li class="trendy__item">
+                        <div class="trendy__inner">
+                            <div class="trendy__content">
+                                <div class="trendy__title">
+                                    Smart and trendy
+                                </div>
+                                <div class="trendy__text">
+                                    <p>
+                                        Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                    </p>
+                                </div>
+                                <a class="btn trendy__link" href="#">
+                                    Shop Now
+                                </a>
+                            </div>
+                            <div class="trendy__image">
+                                <img class="trendy__picture" src="images/products/divan-slider.png"
+                                    alt="Smart and trendy">
+                            </div>
+
                         </div>
                     </li>
                 </ul>
 
-                <div class="trendy__info">
-                    <div class="trendy__info-item trendy__info-item--support">
-                        <div class="trendy__info-title">
-                            Support 24/7
-                        </div>
+        </section>
+
+        <div class="container">
+            <ul class="info">
+                <li class="info__item info__item--support">
+                    <div class="info__title">
+                        Support 24/7
+                    </div>
+                    <div class="info__text">
                         <p>Contact us 24 hours a day, 7 days a week.</p>
                     </div>
 
-                    <div class="trendy__info-item trendy__info-item--delivery">
-                        <div class="trendy__info-title">
-                            Delivery
-                        </div>
+                </li>
+
+                <li class="info__item info__item--delivery">
+                    <div class="info__title">
+                        Delivery
+                    </div>
+                    <div class="info__text">
                         <p>Free shipping on all US order.</p>
                     </div>
 
-                    <div class="trendy__info-item trendy__info-item--payment">
-                        <div class="trendy__info-title">
-                            100% Payment secure.
-                        </div>
+                </li>
+
+                <li class="info__item info__item--payment">
+                    <div class="info__title">
+                        100% Payment secure.
+                    </div>
+                    <div class="info__text">
                         <p>We ensure secure payment with PEV.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <section class="popular">
+            <div class="container container--min">
+                <h2 class="title popular__title">
+                    Products of the week
+                </h2>
+                <div class="popular__gallery">
+                    <ul class="filter popular__filter">
+                        <li class="filter__element">
+                            <button class="filter__btn" type="button" data-filter="all">All</button>
+                        </li>
+                        <li class="filter__element">
+                            <button class="filter__btn" type="button" data-filter=".category-a">Furnitures</button>
+                        </li>
+                        <li class="filter__element">
+                            <button class="filter__btn" type="button" data-filter=".category-b">Chairs</button>
+                        </li>
+                        <li class="filter__element">
+                            <button class="filter__btn" type="button" data-filter=".category-c">Lighting</button>
+                        </li>
+                        <li class="filter__element">
+                            <button class="filter__btn" type="button" data-filter=".category-d">Decor</button>
+                        </li>
+                    </ul>
+
+                    <div class="popular__content">
+                        <article class="card mix category-a">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/1.png" alt="Wooden radio">
+                            </div>
+                            <h3 class="card__name">
+                                Wooden radio
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-a">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/2.png" alt="Wooden chair">
+                            </div>
+                            <h3 class="card__name">
+                                Wooden chair
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-a">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/3.png" alt="White chair">
+                            </div>
+                            <h3 class="card__name">
+                                White chair
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-b">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/4.png" alt="Retro table">
+                            </div>
+                            <h3 class="card__name">
+                                Retro table
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-b">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/5.png" alt="Wooden radio">
+                            </div>
+                            <h3 class="card__name">
+                                Wooden radio
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-d">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/6.png" alt="Wooden chair">
+                            </div>
+                            <h3 class="card__name">
+                                Wooden chair
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-d">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/7.png" alt="White chair">
+                            </div>
+                            <h3 class="card__name">
+                                White chair
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card mix category-c">
+                            <div class="card__image">
+                                <img class="card__picture" src="images/products/8.png" alt="Retro table">
+                            </div>
+                            <h3 class="card__name">
+                                Retro table
+                                <span class="card__price">
+                                    $29.00
+                                </span>
+                            </h3>
+
+                            <div class="card__nav">
+                                <a class="card__link card__link--search" href="#">
+                                    <span class="visually-hidden">
+                                        Иконка поиска
+                                    </span>
+                                </a>
+                                <button class="card__link card__link--active" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка корзины
+                                    </span>
+                                </button>
+                                <button class="card__link card__link--heart" type="button">
+                                    <span class="visually-hidden">
+                                        Иконка избранное
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="products">
-            <div class="min__container">
-                <h2 class="title products__title">
-                    Products of the week
-                </h2>
-                <div class="products__gallery">
-                    <ul class="products__filter">
-                        <li class="products__element">
-                            <button class="products__btn products__btn--active" data-filter="all">All</button>
-                        </li>
-                        <li class="products__element">
-                            <button class="products__btn" data-filter=".category-a">Furnitures</button>
-                        </li>
-                        <li class="products__element">
-                            <button class="products__btn" data-filter=".category-b">Chairs</button>
-                        </li>
-                        <li class="products__element">
-                            <button class="products__btn" data-filter=".category-c">Lighting</button>
-                        </li>
-                        <li class="products__element">
-                            <button class="products__btn" data-filter=".category-d">Decor</button>
-                        </li>
-                    </ul>
+        <section class="design">
 
-                    <div class="products__content">
-                        <div class="products__card mix category-a">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/1.png" alt="Wooden radio">
-                            </div>
-                            <div class="products__name">
-                                Wooden radio
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
+            <!-- Карточки дизайна 
+            ========================= -->
 
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-b">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/2.png" alt="Wooden chair">
-                            </div>
-                            <div class="products__name">
-                                Wooden chair
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-c">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/3.png" alt="White chair">
-                            </div>
-                            <div class="products__name">
-                                White chair
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-d">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/4.png" alt="Retro table">
-                            </div>
-                            <div class="products__name">
-                                Retro table
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-a">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/5.png" alt="Wooden radio">
-                            </div>
-                            <div class="products__name">
-                                Wooden radio
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-b">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/6.png" alt="Wooden chair">
-                            </div>
-                            <div class="products__name">
-                                Wooden chair
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-c">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/7.png" alt="White chair">
-                            </div>
-                            <div class="products__name">
-                                White chair
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="products__card mix category-c">
-                            <div class="products__image">
-                                <img class="products__picture" src="images/products/8.png" alt="Retro table">
-                            </div>
-                            <div class="products__name">
-                                Retro table
-                                <span class="products__price">
-                                    $29.00
-                                </span>
-                            </div>
-                            <div class="products__nav">
-                                <a class="products__link products__link--search" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка поиска
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--active" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка корзины
-                                    </span>
-                                </a>
-                                <a class="products__link products__link--heart" href="#">
-                                    <span class="visually-hidden">
-                                        Иконка избранное
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="video">
+                <a class="video__link popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                    <span class="visually-hidden">Иконка плеера</span>
+                </a>
             </div>
         </section>
 
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="min__container">
-                <div class="footer-top">
+        <div class="container container--min">
+            <div class="footer__top">
 
-                    <address class="footer-top__list">
-                        <a class="logo footer-top__logo" href="#">
-                            <img class="logo__image" src="images/logo.png" alt="logo">
-                        </a>
-                        <ul class="footer-top__items">
-                            <li class="footer-top__item footer-top__item--addres">
-                                <span class="footer-top__connection">Address:</span>
-                                <a class="footer-top__item-link " href="#">
-                                    4772 Wines Lane
-                                    Houston, TX 77032
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <span class="footer-top__connection">Telephone:</span>
-                                <a class="footer-top__item-link" href="tel: +8323475843">
-                                    +832-347-5843
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <span class="footer-top__connection">Email:</span>
-                                <a class="footer-top__item-link" href="mailto: contact@Glee.com">
-                                    contact@Glee.com
-                                </a>
-                            </li>
-                        </ul>
-                    </address>
-
-                    <div class="footer-top__list">
-                        <div class="footer-top__title">
-                            Services
+                <address class="footer__list">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__image" src="images/logo.png" alt="logo">
+                    </a>
+                    <div class="footer__items">
+                        <div class="footer__item footer__item--addres">
+                            <span class="footer__connection">Address:</span>
+                            <a class="footer__item-link footer__item-link--address" href="#">
+                                4772 Wines Lane
+                                Houston, TX 77032
+                            </a>
                         </div>
-                        <ul class="footer-top__items">
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    About us
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Return Policy
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Our Blog
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Contact Us
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Terms & Condition
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-top__list">
-                        <div class="footer-top__title">
-                            Account
+                        <div class="footer__item">
+                            <span class="footer__connection">Telephone:</span>
+                            <a class="footer__item-link" href="tel:+8323475843">
+                                +832-347-5843
+                            </a>
                         </div>
-                        <ul class="footer-top__items">
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Your Account
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Checkout
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Login
-                                </a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a class="footer-top__item-link" href="#">
-                                    Register
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-top__list">
-                        <div class="footer-top__title">
-                            Newsletter
+                        <div class="footer__item">
+                            <span class="footer__connection">Email:</span>
+                            <a class="footer__item-link" href="mailto:contact@Glee.com">
+                                contact@Glee.com
+                            </a>
                         </div>
-                        <p class="footer-top__item-text" href="#">
-                            Subscribe by our newsletter and get
-                            update protidin.
-                        </p>
-
-                        <form class="footer-top__form" action="#">
-                            <label>
-                                <input class="footer-top__input" type="email" placeholder="Email address" required>
-                            </label>
-                            <button class="btn footer-top__btn" type="submit">Subscribe</button>
-                        </form>
                     </div>
-                </div>
+                </address>
 
-                <div class="footer-bottom">
-                    <p class="footer-bottom__copyright">
-                        ©2020 CopyRight Example. All rights reserved.
-                    </p>
-                    <ul class="footer-bottom__list">
-                        <li class="footer-bottom__item">
-                            <a href="#" class="footer-bottom__link">Home</a>
+                <div class="footer__list">
+                    <div class="footer__title">
+                        Services
+                    </div>
+                    <ul class="footer__items">
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                About us
+                            </a>
                         </li>
-                        <li class="footer-bottom__item">
-                            <a href="#" class="footer-bottom__link">About</a>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Return Policy
+                            </a>
                         </li>
-                        <li class="footer-bottom__item">
-                            <a href="#" class="footer-bottom__link">Blog</a>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Our Blog
+                            </a>
                         </li>
-                        <li class="footer-bottom__item">
-                            <a href="#" class="footer-bottom__link">Contact</a>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Terms & Condition
+                            </a>
                         </li>
                     </ul>
                 </div>
+
+                <div class="footer__list">
+                    <div class="footer__title">
+                        Account
+                    </div>
+                    <ul class="footer__items">
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Your Account
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Checkout
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Login
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="#">
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__list">
+                    <div class="footer__title">
+                        Newsletter
+                    </div>
+                    <p class="footer__item-text" href="#">
+                        Subscribe by our newsletter and get
+                        update protidin.
+                    </p>
+
+                    <form class="email-form" action="#">
+                        <label>
+                            <span class="visually-hidden">
+                                Введите почту
+                            </span>
+                            <input class="email-form__input" type="email" name="email" placeholder="Email address"
+                                required>
+                        </label>
+                        <button class="btn email-form__btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    ©2020 CopyRight Example. All rights reserved.
+                </p>
+
+                <ul class="menu__list">
+                    <li class="menu__item footer__bottom-item">
+                        <a class="menu__link footer__link" href="#">Home</a>
+                    </li>
+                    <li class="menu__item footer__bottom-item">
+                        <a class="menu__link footer__link" href="#">About</a>
+                    </li>
+                    <li class="menu__item footer__bottom-item">
+                        <a class="menu__link footer__link" href="#">Blog</a>
+                    </li>
+                    <li class="menu__item footer__bottom-item">
+                        <a class="menu__link footer__link" href="#">Contact</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </footer>

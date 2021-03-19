@@ -7,5 +7,15 @@ $(function(){
         autoplay: true
     });
 
-    var mixer = mixitup('.products__content')
+    var mixer = mixitup('.popular__content')
+
+    $('.popup-youtube').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
 });

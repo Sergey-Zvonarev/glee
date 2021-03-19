@@ -1,0 +1,189 @@
+.header {
+    &__inner {
+
+        padding: 50px 0;
+    }
+
+    &__logo {
+        margin-right: 154px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__link {
+        @extend %rubik-700;
+        color: $link;
+        transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    &__inner {
+        display: flex;
+        position: relative;
+        margin-right: 20px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: $bg;
+        transition: color 0.5s, transform 0.5s, box-shadow 0.5s;
+
+        &:hover {
+            color: $accent;
+            transform: scale(1.1);
+            box-shadow: 0 0 5px black;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &--search {
+            background-color: $search;
+        }
+
+
+        .user-nav &--heart {
+            background: $accent;
+            border-radius: 46px 0 0 46px;
+            margin-right: 0;
+            min-width: 93px;
+        }
+
+        &--basket {
+            background-color: $accent;
+            border-radius: 0 46px 46px 0;
+            min-width: 93px;
+        }
+
+        &--menu {
+            background-color: $btn;
+        }
+    }
+
+    &__btn {
+        position: relative;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $accent;
+            border-radius: 4px;
+        }
+
+        &--search {
+            background-image: url('../images/icons/icon-search.svg');
+        }
+
+        &--heart {
+            background-image: url('../images/icons/icon-heart.svg');
+            margin-left: 10px;
+
+            &:active {
+                background-color: $btn;
+                color: $link;
+            }
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $link;
+            }
+        }
+
+        &--basket {
+            background-image: url('../images/icons/icon-basket.svg');
+            margin-right: 10px;
+
+            &:active {
+                background-color: $btn;
+                color: $link;
+            }
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $link;
+            }
+        }
+
+        &--menu {
+            background-image: url('../images/icons/icon-ellipse.svg');
+        }
+    }
+
+    &__num {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $bg;
+
+        @extend %dmsans-400;
+        font-size: 10px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__rectangle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $bg;
+        width: 1px;
+        height: 32px;
+    }
+
+}

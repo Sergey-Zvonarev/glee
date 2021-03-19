@@ -11,6 +11,7 @@ body {
     font-size: 16px;
     color: $default;
     line-height: 1.9;
+    background-color: #ffffff;
 }
 
 .main {
@@ -21,11 +22,10 @@ body {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
-}
 
-.min__container {
-    max-width: 1170px;
-    margin: 0 auto; 
+    &--min {
+        max-width: 1200px;
+    }
 }
 
 .visually-hidden {
@@ -38,6 +38,15 @@ body {
     height: 1px !important;
     width: 1px !important;
     overflow: hidden;
+}
+
+.logo {
+
+    &__image {
+        object-fit: contain;
+        width: 145px;
+        height: 45px;
+    }
 }
 
 .btn {
@@ -65,4 +74,196 @@ body {
     font-size: 36px;
     color: $title;
     @extend %dmsans-700;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+
+    .mixitup-control-active {
+        color: #1a1a1a;
+
+
+    }
+
+    &__element {
+
+        &:not(:last-child) {
+            margin-right: 19px;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        color: $filter-btn;
+        cursor: pointer;
+        @extend %dmsans-700;
+        transition: color 0.5s, background-color 0.5s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            background-color: $default;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $default;
+        }
+
+
+    }
+
+
+}
+
+.card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 270px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    padding: 23px 20px 30px;
+    margin-bottom: 38px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    &:hover {
+        .card__nav {
+            opacity: 1;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 210px;
+        width: 238px;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+
+    &__picture {
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    &__name {
+        // display: -webkit-box;
+        // -webkit-line-clamp: 2;
+        // -webkit-box-orient: vertical;
+        // overflow: hidden;
+
+        @extend %dmsans-500;
+        color: $default;
+        font-size: 16px;
+        line-height: 2.2;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__price {
+        display: block;
+        color: $btn;
+    }
+
+    &__nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 5px $link;
+
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        transition: transform 0.5s, background-color 0.5s, color 0.5s;
+        border: none;
+
+        &:not(:last-child) {
+            margin-right: 14px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $link;
+        }
+
+        &--search {
+            background-image: url('../images/icons/icon-search-blue.svg');
+        }
+
+        &--active {
+            background-color: $btn;
+            background-image: url('../images/icons/icon-basket-white.svg');
+        }
+
+        &--heart {
+            background-image: url('../images/icons/icon-heart-blue2.svg');
+        }
+    }
+}
+
+.email-form {
+    display: flex;
+
+    &__input {
+        height: 38px;
+        width: 170px;
+        border: none;
+        background-color: #fef7f0;
+        padding: 8px 20px 8px 21px;
+        @extend %dmsans-400;
+        font-size: 12px;
+        color: #234969;
+        transition: background-color 0.5s;
+
+        &::placeholder {
+            color: #234969;
+        }
+
+        &:hover {
+            background-color: $accent;
+        }
+    }
+
+    &__btn {
+        height: 38px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        padding: 0px 23px 0 22px;
+    }
 }
