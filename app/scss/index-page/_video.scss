@@ -1,0 +1,45 @@
+.video {
+    position: relative;
+    min-height: 500px;
+    background-image: url('../images/decor/video-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &__link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: background-color 0.5s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+            background-image: url('../images/icons/video-play.svg');
+            width: 98px;
+            height: 98px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            width: 128px;
+            height: 128px;
+            background-color: rgba(#a3bbc8, 0.5);
+        }
+
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+    }
+}

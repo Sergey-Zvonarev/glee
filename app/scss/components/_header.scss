@@ -28,6 +28,7 @@
     &__link {
         @extend %rubik-700;
         color: $link;
+        padding: 2px;
         transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
 
         &:hover {
@@ -35,148 +36,19 @@
         }
 
         &:active {
-            background-color: $accent;
-            color: $link;
+            background-color: $default;
         }
 
         &:focus {
             outline: transparent;
-            box-shadow: 0 0 0 1px $accent;
+            box-shadow: 0 0 0 1px $default;
         }
     }
 }
 
-.user-nav {
-    display: flex;
+.navigation {
 
-    &__inner {
-        display: flex;
-        position: relative;
-        margin-right: 20px;
-    }
-
-    &__box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        color: $bg;
-        transition: color 0.5s, transform 0.5s, box-shadow 0.5s;
-
-        &:hover {
-            color: $accent;
-            transform: scale(1.1);
-            box-shadow: 0 0 5px black;
-        }
-
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-
-        &--search {
-            background-color: $search;
-        }
-
-
-        .user-nav &--heart {
-            background: $accent;
-            border-radius: 46px 0 0 46px;
-            margin-right: 0;
-            min-width: 93px;
-        }
-
-        &--basket {
-            background-color: $accent;
-            border-radius: 0 46px 46px 0;
-            min-width: 93px;
-        }
-
-        &--menu {
-            background-color: $btn;
-        }
-    }
-
-    &__btn {
-        position: relative;
-
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 20px;
-        height: 20px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-
-        &:active {
-            background-color: $accent;
-            color: $link;
-        }
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 2px $accent;
-            border-radius: 4px;
-        }
-
-        &--search {
-            background-image: url('../images/icons/icon-search.svg');
-        }
-
-        &--heart {
-            background-image: url('../images/icons/icon-heart.svg');
-            margin-left: 10px;
-
-            &:active {
-                background-color: $btn;
-                color: $link;
-            }
-
-            &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $link;
-            }
-        }
-
-        &--basket {
-            background-image: url('../images/icons/icon-basket.svg');
-            margin-right: 10px;
-
-            &:active {
-                background-color: $btn;
-                color: $link;
-            }
-
-            &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $link;
-            }
-        }
-
-        &--menu {
-            background-image: url('../images/icons/icon-ellipse.svg');
-        }
-    }
-
-    &__num {
-        position: absolute;
-        top: -9px;
-        right: -9px;
-
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: $bg;
-
-        @extend %dmsans-400;
-        font-size: 10px;
-        text-align: center;
-        line-height: 1.5;
-    }
-
-    &__rectangle {
+    &__line {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -186,4 +58,128 @@
         height: 32px;
     }
 
+    &__num {
+        position: absolute;
+
+        top: 8px;
+        right: 29px;
+        width: 15px;
+        height: 15px;
+        background-color: $bg;
+        border-radius: 50%;
+        font-size: 10px;
+        text-align: center;
+        line-height: 1.5;
+
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__box {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &--heart-basket {
+            position: relative;
+            display: flex;
+        }
+    }
+
+    &__btn {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
+
+        path {
+            fill: $link;
+        }
+
+        &--search {
+            background-color: $search;
+        }
+
+        &--heart {
+
+
+            background: $accent;
+            border-radius: 46px 0 0 46px;
+            margin-right: 0;
+            min-width: 93px;
+
+            &:hover {
+                position: relative;
+                z-index: 2;
+            }
+
+            .navigation__item &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 46px 0 0 46px;
+            }
+        }
+
+        .navigation__box &--burgermenu {
+            background-color: $btn;
+
+            path {
+                fill: $bg;
+            }
+        }
+
+        &--basket {
+            background-color: $accent;
+            border-radius: 0 46px 46px 0;
+            min-width: 93px;
+
+            .navigation__item &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 0 46px 46px 0;
+            }
+        }
+
+        &:hover {
+            path {
+                fill: $accent;
+            }
+
+            background-color: $link;
+            transform: scale(1.1);
+            box-shadow: 0 0 5px black;
+        }
+
+        &:active {
+            background-color: $btn;
+            color: $link;
+
+            path {
+                fill: $connection;
+            }
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $accent;
+            border-radius: 50%;
+        }
+    }
+
+    &__basket-heart {
+        display: flex;
+        position: relative;
+        margin-right: 20px;
+    }
 }

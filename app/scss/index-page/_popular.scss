@@ -1,9 +1,13 @@
 .popular {
-    padding: 53px 0 80px;
+    padding: 53px 0 43px;
 
     &__title {
         text-align: center;
         margin-bottom: 8px;
+    }
+
+    &__gallery {
+        margin-bottom: 177px;
     }
 
     &__filter {
@@ -11,10 +15,85 @@
     }
 
     &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px 30px;
+    }
+
+    & .navigation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-left: -15px;
-        margin-right: -15px;
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        &__box {
+
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        &__btn {
+            box-shadow: 0 0 5px $default;
+            background-color: $bg;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
+
+            &:hover {
+
+                background-color: $btn;
+            }
+
+            &:active {
+                background-color: $link;
+
+                path {
+                    fill: $default;
+                }
+            }
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 50%;
+            }
+
+            &--active {
+                background-color: $btn;
+
+                path {
+                    fill: #fff;
+                }
+
+                &:hover {
+
+                    path {
+                        fill: $accent;
+                    }
+                }
+
+                &:active {
+
+                    path {
+                        fill: $default;
+                    }
+                }
+            }
+
+            &--search {
+                box-shadow: 0 0 5px $default;
+                background-color: $bg;
+            }
+
+            &--basket,
+            &--heart {
+                min-width: 45px;
+            }
+        }
     }
 }

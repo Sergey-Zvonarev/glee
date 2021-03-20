@@ -1,0 +1,23 @@
+.partners {
+    background-color: $lamps;
+    padding-top: 247px;
+    padding-bottom: 60px;
+
+    .slick-initialized {
+
+        .slick-slide {
+            display: inline-flex;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 130px;
+    }
+
+    &__picture {
+        object-fit: contain;
+    }
+}

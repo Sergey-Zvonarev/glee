@@ -1,13 +1,27 @@
-$(function(){
+$(function () {
 
     $('.trendy__slider').slick({
         arrows: false,
         dots: true,
         // fade: true,
-        autoplay: true
+        // autoplay: true
     });
 
-    var mixer = mixitup('.popular__content')
+    $('.partners__inner').slick({
+        arrows: false,
+    });
+
+    let mixerPopular = mixitup('.popular__content', {
+        selectors: {
+            control: '.popular-btn'
+        }
+    });
+    let mixerDesign = mixitup('.design__inner', {
+        selectors: {
+            control: '.design-btn'
+        }
+    });
+
 
     $('.popup-youtube').magnificPopup({
         disableOn: 700,
@@ -17,5 +31,9 @@ $(function(){
         preloader: false,
 
         fixedContentPos: false
+    });
+
+    $('.star').rateYo({
+        starWidth: "40px"
     });
 });

@@ -10,6 +10,9 @@ $info: #fef7f0;
 $search: #edf1f4;
 $text: #585858;
 $connection: #7b7b7b;
+$lamps: #feefe2;
+$design:#f8f8f8;
+$insights: #262626;
 
 
 %dmsans-700 {
@@ -42,10 +45,20 @@ $connection: #7b7b7b;
     font-weight: 400;
 }
 
-@function max($numbers...) {
-    @return m#{a}x(#{$numbers});
+%poppins-700 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
 }
 
-@function min($numbers...) {
-    @return m#{i}n(#{$numbers});
+%hover {
+    color: $accent;
+}
+
+%active {
+    background-color: $default;
+}
+
+%focus {
+    outline: transparent;
+    box-shadow: 0 0 0 1px $default;
 }

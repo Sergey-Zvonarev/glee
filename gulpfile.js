@@ -55,6 +55,7 @@ function scripts() {
             'node_modules/slick-carousel/slick/slick.min.js', //установка slick-slidera, но перед эти установить npm i slick-carousel --save-dev
             'node_modules/mixitup/dist/mixitup.min.js', //установка mixitup, но перед эти установить npm i mixitup --save-dev
             'node_modules/magnific-popup/dist/jquery.magnific-popup.js', //установка magnific, но перед эти установить  npm install magnific-popup --save-dev
+            'node_modules/rateyo/src/jquery.rateyo.js', //установка rateyo(рейтинг звезд), но перед эти установить  npm install rateyo@2.3.2 --save-dev
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
