@@ -1,6 +1,4 @@
 .footer {
-
-
     &__top {
         display: flex;
         justify-content: space-between;
@@ -8,7 +6,12 @@
         border-bottom: 1px solid #dae4e9;
     }
 
-    &__list {
+    &__col {
+        padding-top: 18px;
+    }
+
+    &__contact,
+    &__col {
         max-width: 300px;
         width: 100%;
 
@@ -23,36 +26,43 @@
     }
 
     &__title {
-        @extend %dmsans-700;
+        @include dmsans(700);
         color: rgb(31, 32, 68);
         text-transform: uppercase;
         line-height: 1.3;
         margin-bottom: 14px;
-        padding-top: 18px;
     }
 
     &__connection {
         font-size: 14px;
-        @extend %rubik-400;
+        @include rubik(400);
         color: $connection;
         line-height: 2.3;
         font-style: normal;
         text-transform: uppercase;
     }
 
-    &__item--addres {
-        max-width: 185px;
+    &__item {
+        &--addres {
+            max-width: 185px;
+        }
     }
 
+    &__text {
+        margin-bottom: 20px;
+    }
 
-    &__item-link,
-    &__item-text {
+    &__content {
         font-size: 14px;
-        @extend %rubik-400;
+        @include rubik(400);
         color: $connection;
         line-height: 2.3;
-        font-style: normal;
         transition: color 0.5s, background-color 0.5s;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
 
         &:hover {
             color: $accent;
@@ -62,16 +72,14 @@
             background-color: $accent;
             color: $link;
         }
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 1px $accent;
-        }
     }
 
-    &__item-text {
+    &__text {
         margin-bottom: 33px;
         line-height: 1.9;
+        font-size: 14px;
+        @include rubik(400);
+        color: $connection;
     }
 
     &__bottom {
@@ -101,7 +109,12 @@
     .menu__link {
         color: $connection;
         transition: color 0.5s, background-color 0.5s;
-        @extend %rubik-400;
+        @include rubik(400);
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
 
         &:hover {
             color: $accent;
@@ -110,11 +123,6 @@
         &:active {
             background-color: $accent;
             color: $link;
-        }
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 1px $accent;
         }
     }
 }

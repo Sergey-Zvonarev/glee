@@ -1,6 +1,5 @@
 .header {
     &__inner {
-
         padding: 50px 0;
     }
 
@@ -19,17 +18,21 @@
     }
 
     &__item {
-
         &:not(:last-child) {
             margin-right: 30px;
         }
     }
 
     &__link {
-        @extend %rubik-700;
+        @include rubik(700);
         color: $link;
         padding: 2px;
         transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $default;
+        }
 
         &:hover {
             color: $accent;
@@ -38,15 +41,19 @@
         &:active {
             background-color: $default;
         }
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 1px $default;
-        }
     }
 }
 
 .navigation {
+    &__icon {
+        width: 18px;
+        height: 16px;
+        fill: $default;
+
+        &--burger-menu {
+            fill: $bg;
+        }
+    }
 
     &__line {
         position: absolute;
@@ -92,7 +99,6 @@
 
     &__btn {
         position: relative;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,56 +109,14 @@
         border-radius: 50%;
         transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
 
-        path {
-            fill: $link;
-        }
-
-        &--search {
-            background-color: $search;
-        }
-
-        &--heart {
-
-
-            background: $accent;
-            border-radius: 46px 0 0 46px;
-            margin-right: 0;
-            min-width: 93px;
-
-            &:hover {
-                position: relative;
-                z-index: 2;
-            }
-
-            .navigation__item &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $accent;
-                border-radius: 46px 0 0 46px;
-            }
-        }
-
-        .navigation__box &--burgermenu {
-            background-color: $btn;
-
-            path {
-                fill: $bg;
-            }
-        }
-
-        &--basket {
-            background-color: $accent;
-            border-radius: 0 46px 46px 0;
-            min-width: 93px;
-
-            .navigation__item &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $accent;
-                border-radius: 0 46px 46px 0;
-            }
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $accent;
+            border-radius: 50%;
         }
 
         &:hover {
-            path {
+            .navigation__icon {
                 fill: $accent;
             }
 
@@ -164,16 +128,44 @@
         &:active {
             background-color: $btn;
             color: $link;
+        }
 
-            path {
-                fill: $connection;
+        &--search {
+            background-color: $search;
+        }
+
+        &--heart {
+            background: $accent;
+            border-radius: 46px 0 0 46px;
+            margin-right: 0;
+            width: 93px;
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 46px 0 0 46px;
+            }
+
+            &:hover {
+                position: relative;
+                z-index: 2;
             }
         }
 
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 2px $accent;
-            border-radius: 50%;
+        &--burgermenu {
+            background-color: $btn;
+        }
+
+        &--basket {
+            background-color: $accent;
+            border-radius: 0 46px 46px 0;
+            width: 93px;
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 0 46px 46px 0;
+            }
         }
     }
 

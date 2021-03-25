@@ -46,10 +46,9 @@
             top: 50%;
             right: 192px;
             z-index: 0;
-            background-image: url('../images/decor/ellips-slider.png');
+            background-image: url('../images/content/decor/ellips-slider.png');
             width: 610px;
             height: 634px;
-
             transform: translateY(-50%);
         }
     }
@@ -65,27 +64,22 @@
         justify-content: center;
         min-height: 820px;
         max-width: 430px;
-        margin-left: 300px;
         padding-bottom: 74px;
         margin-right: 100px;
     }
 
     &__title {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
+        @include line-clamp(3);
         text-transform: uppercase;
         font-size: 72px;
         color: rgb(36, 63, 77);
         line-height: 1;
         margin-bottom: 28px;
-        @extend %rubik-500;
+        @include rubik(700);
     }
 
     &__text {
-
+        @include line-clamp(5);
         font-size: 18px;
         color: $link;
         line-height: 1.7;
@@ -95,13 +89,12 @@
 
     &__link {
         position: relative;
-
         padding: 18px 60px 13px 27px;
         max-width: 202px;
 
         &::after {
             content: '';
-            background-image: url('../images/icons/arrow-right.svg');
+            background-image: url('../images/content/icons/arrow-right.svg');
             background-position: center;
             background-repeat: no-repeat;
             width: 22px;
@@ -111,8 +104,10 @@
             right: 18px;
         }
 
-        &:hover::after {
-            background-image: url('../images/icons/arrow-right_hover.svg')
+        &:hover {
+            &::after {
+                background-image: url('../images/content/icons/arrow-right_hover.svg')
+            }
         }
     }
 

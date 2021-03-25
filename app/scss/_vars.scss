@@ -13,41 +13,28 @@ $connection: #7b7b7b;
 $lamps: #feefe2;
 $design:#f8f8f8;
 $insights: #262626;
+$input: #234969;
 
-
-%dmsans-700 {
-    font-family: "DMSans", sans-serif;
-    font-weight: 700;
+@mixin line-clamp($lines) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
 }
 
-%dmsans-500 {
-    font-family: "DMSans-Medium", sans-serif;
-    font-weight: 500;
+@mixin dmsans($weight) {
+        font-family: "DMSans", sans-serif;
+        font-weight: $weight;
 }
 
-%dmsans-400 {
-    font-family: "DMSans-Regular", sans-serif;
-    font-weight: 400;
+@mixin rubik($weight) {
+    font-family: "Rubik", sans-serif;
+    font-weight: $weight;
 }
 
-%rubik-700 {
-    font-family: "Rubik-Bold", sans-serif;
-    font-weight: 700;
-}
-
-%rubik-500 {
-    font-family: "Rubik-Medium", sans-serif;
-    font-weight: 500;
-}
-
-%rubik-400 {
-    font-family: "Rubik-Regular", sans-serif;
-    font-weight: 400;
-}
-
-%poppins-700 {
+@mixin poppins($weight) {
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    font-weight: $weight;
 }
 
 %hover {

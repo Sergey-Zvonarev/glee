@@ -1,7 +1,8 @@
 .video {
     position: relative;
     min-height: 500px;
-    background-image: url('../images/decor/video-bg.jpg');
+
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
@@ -13,23 +14,22 @@
         left: 0;
         transition: background-color 0.5s;
 
-        &::before {
-            content: '';
+        &::before,
+        &::after {
+            content:'';
             position: absolute;
             top: 50%;
             left: 50%;
+        }
+        &::before {
             z-index: 10;
             transform: translate(-50%, -50%);
-            background-image: url('../images/icons/video-play.svg');
+            background-image: url('../images/content/icons/video-play.svg');
             width: 98px;
             height: 98px;
         }
 
         &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
             z-index: 0;
             border-radius: 50%;
             transform: translate(-50%, -50%);
@@ -39,7 +39,7 @@
         }
 
         &:hover {
-            background-color: rgba($color: #000000, $alpha: 0.5);
+            background-color: rgba(#000000, 0.5);
         }
     }
 }

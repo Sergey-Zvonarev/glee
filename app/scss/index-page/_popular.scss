@@ -1,5 +1,5 @@
 .popular {
-    padding: 53px 0 43px;
+    padding: 53px 0 50px;
 
     &__title {
         text-align: center;
@@ -7,7 +7,7 @@
     }
 
     &__gallery {
-        margin-bottom: 177px;
+        margin-bottom: 139px;
     }
 
     &__filter {
@@ -15,12 +15,26 @@
     }
 
     &__content {
+        // display: flex;
+        // flex-wrap: wrap;
+        // margin-left: -15px;
+        // margin-right: -15px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 40px 30px;
     }
+    
+    // &__item {
+    //     margin-left: 15px;
+    //     margin-right: 15px;
+    //     margin-bottom: 40px;
+    // }
+    
+    &__card {
+        width: 270px;
+    }
 
-    & .navigation {
+    .navigation {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -30,7 +44,6 @@
         transition: opacity 0.5s;
 
         &__box {
-
             &:not(:last-child) {
                 margin-right: 16px;
             }
@@ -44,56 +57,24 @@
             height: 45px;
             transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
 
-            &:hover {
-
-                background-color: $btn;
-            }
-
-            &:active {
-                background-color: $link;
-
-                path {
-                    fill: $default;
-                }
-            }
-
             &:focus {
                 outline: transparent;
                 box-shadow: 0 0 0 2px $accent;
                 border-radius: 50%;
             }
 
-            &--active {
+            &:hover {
                 background-color: $btn;
 
-                path {
-                    fill: #fff;
-                }
-
-                &:hover {
-
-                    path {
-                        fill: $accent;
-                    }
-                }
-
-                &:active {
-
-                    path {
-                        fill: $default;
-                    }
+                .navigation__icon {
+                    fill: $bg;
                 }
             }
 
-            &--search {
-                box-shadow: 0 0 5px $default;
-                background-color: $bg;
-            }
-
-            &--basket,
-            &--heart {
-                min-width: 45px;
+            &:active {
+                background-color: $link;
             }
         }
     }
+
 }

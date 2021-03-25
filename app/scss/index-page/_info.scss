@@ -26,32 +26,34 @@
         &--support {
 
             &::before {
-                background-image: url('../images/support.svg');
+                background-image: url('../images/content/support.svg');
             }
         }
 
         &--delivery {
 
             &::before {
-                background-image: url('../images/delivery.svg');
+                background-image: url('../images/content/delivery.svg');
                 top: 56px;
                 left: 138px;
             }
         }
 
-        &--payment::before {
-            background-image: url('../images/payment.svg');
+        &--payment {
+            &::before {
+                background-image: url('../images/content/payment.svg');
+            }
         }
     }
 
     &__text {
         max-width: 222px;
-        @extend %dmsans-400;
+        @include dmsans(400);
         color: $text;
     }
 
     &__title {
-        @extend %dmsans-700;
+        @include dmsans(700);
         color: #414141;
         font-size: 18px;
         line-height: 2.2;

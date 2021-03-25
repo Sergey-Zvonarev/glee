@@ -1,5 +1,18 @@
 $(function () {
 
+    $(".filter-price__input").ionRangeSlider({
+        type: "double",
+        prefix: "$",
+        onStart: function (data) {
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+        onChange: function (data) {
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+    });
+
     $('.trendy__slider').slick({
         arrows: false,
         dots: true,
@@ -7,23 +20,19 @@ $(function () {
         // autoplay: true
     });
 
-    $('.partners__inner').slick({
+    $('.partners__list').slick({
+        dots: false,
         arrows: false,
-    });
-
-    let mixerPopular = mixitup('.popular__content', {
-        selectors: {
-            control: '.popular-btn'
-        }
-    });
-    let mixerDesign = mixitup('.design__inner', {
-        selectors: {
-            control: '.design-btn'
-        }
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: true
     });
 
 
-    $('.popup-youtube').magnificPopup({
+
+    $('.js-popup-youtube').magnificPopup({
         disableOn: 700,
         type: 'iframe',
         mainClass: 'mfp-fade',
@@ -34,6 +43,22 @@ $(function () {
     });
 
     $('.star').rateYo({
-        starWidth: "40px"
+        rating: 3.6,
+        // normalFill: '#d6d6d6',
+        // ratedFill: '#ffcc00',
     });
+    
+    let mixerPopular = mixitup('.popular__content', {
+        selectors: {
+            control: '.js-popular-btn'
+        }
+    });
+
+    let mixerDesign = mixitup('.design__inner', {
+        selectors: {
+            control: '.js-design-btn'
+        }
+    });
+
+
 });
