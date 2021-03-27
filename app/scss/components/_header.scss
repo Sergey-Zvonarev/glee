@@ -1,10 +1,24 @@
 .header {
     &__inner {
+        display: flex;
+        justify-content: space-between;
         padding: 50px 0;
+
+        @include max-width(768) {
+            align-items: center;
+        }
     }
 
     &__logo {
+        position: relative;
+        z-index: 11;
         margin-right: 154px;
+
+        @include max-width(1200) {
+            order: 1;
+            margin-right: 0;
+        }
+
     }
 }
 
@@ -12,14 +26,74 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 30px;
+
+    @include max-width(1200) {
+        order: 3;
+    }
+
+    @include max-width(768) {
+        margin-right: 0;
+    }
 
     &__list {
         display: flex;
+        align-items: center;
+
+        @include max-width(1200) {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            top: 0;
+            text-align: center;
+            padding: 115px 0 15px;
+            background-color: $lamps;
+            transform: translatey(-200%);
+            transition: transform 0.5s;
+
+            &.menu__list--active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__burger {
+        position: relative;
+        z-index: 11;
+        display: none;
+        border: none;
+        font-size: 0;
+        background-color: transparent;
+        padding: 0;
+
+        svg {
+            fill: $default;
+            width: 40px;
+            height: 35px;
+        }
+
+        @include max-width(1200) {
+            display: block;
+
+            &.menu__burger--active {
+                svg {
+                    fill: $btn;
+                }
+            }
+        }
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 30px;
+        }
+
+        @include max-width(1200) {
+            .menu__list & {
+                margin-right: 0;
+            }
         }
     }
 
@@ -41,10 +115,23 @@
         &:active {
             background-color: $default;
         }
+
+        @include max-width(1200) {
+            display: block;
+            padding: 15px 0;
+
+            &:hover {
+                background-color: $default;
+            }
+        }
     }
 }
 
 .navigation {
+    @include max-width(1200) {
+        order: 2;
+    }
+
     &__icon {
         width: 18px;
         height: 16px;
@@ -63,6 +150,10 @@
         background-color: $bg;
         width: 1px;
         height: 32px;
+
+        @include max-width(768) {
+            display: none;
+        }
     }
 
     &__num {
@@ -76,7 +167,13 @@
         border-radius: 50%;
         font-size: 10px;
         text-align: center;
-        line-height: 1.5;
+        line-height: 1.6;
+
+        @include max-width(768) {
+            background-color: $accent;
+            top: 0;
+            right: 0;
+        }
 
     }
 
@@ -87,6 +184,7 @@
     }
 
     &__box {
+
         &:not(:last-child) {
             margin-right: 20px;
         }
@@ -94,6 +192,27 @@
         &--heart-basket {
             position: relative;
             display: flex;
+        }
+
+
+        @include max-width(768) {
+            .navigation__inner & {
+                margin-right: 10px;
+            }
+        }
+
+        @include max-width(414) {
+            .navigation__inner & {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &__item {
+
+        @include max-width(768) {
+            margin-right: 10px;
         }
     }
 
@@ -108,6 +227,11 @@
         height: 50px;
         border-radius: 50%;
         transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
+
+        @include max-width(768) {
+            width: 30px;
+            height: 30px;
+        }
 
         &:focus {
             outline: transparent;
@@ -132,6 +256,10 @@
 
         &--search {
             background-color: $search;
+
+            @include max-width(768) {
+                background-color: transparent;
+            }
         }
 
         &--heart {
@@ -139,6 +267,11 @@
             border-radius: 46px 0 0 46px;
             margin-right: 0;
             width: 93px;
+
+            @include max-width(768) {
+                width: 35px;
+                background-color: transparent;
+            }
 
             &:focus {
                 outline: transparent;
@@ -154,12 +287,22 @@
 
         &--burgermenu {
             background-color: $btn;
+
+            @include max-width(768) {
+                display: none;
+            }
+
         }
 
         &--basket {
             background-color: $accent;
             border-radius: 0 46px 46px 0;
             width: 93px;
+
+            @include max-width(768) {
+                background-color: transparent;
+                width: 35px;
+            }
 
             &:focus {
                 outline: transparent;

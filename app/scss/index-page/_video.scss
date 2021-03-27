@@ -16,11 +16,12 @@
 
         &::before,
         &::after {
-            content:'';
+            content: '';
             position: absolute;
             top: 50%;
             left: 50%;
         }
+
         &::before {
             z-index: 10;
             transform: translate(-50%, -50%);
@@ -41,5 +42,13 @@
         &:hover {
             background-color: rgba(#000000, 0.5);
         }
+    }
+
+    @include max-width(768) {
+        min-height: 400px;
+    }
+
+    @include max-width(768) {
+        min-height: 300px;
     }
 }

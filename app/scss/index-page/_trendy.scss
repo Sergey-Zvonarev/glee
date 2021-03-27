@@ -7,6 +7,10 @@
         display: flex;
         transform: translateX(-50%);
 
+        @include max-width(768) {
+            bottom: 10px;
+        }
+
         li {
             &:not(:last-child) {
                 margin-right: 12px;
@@ -31,6 +35,11 @@
             color: $default;
             font-size: 10px;
             opacity: 0.5;
+
+            @include max-width(768) {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 
@@ -50,6 +59,11 @@
             width: 610px;
             height: 634px;
             transform: translateY(-50%);
+
+            @include max-width(1200) {
+                display: none;
+            }
+
         }
     }
 
@@ -66,6 +80,21 @@
         max-width: 430px;
         padding-bottom: 74px;
         margin-right: 100px;
+
+        @include max-width(1200) {
+            min-height: 500px;
+            padding-bottom: 30px;
+        }
+
+        @include max-width(768) {
+            padding-top: 10px;
+            min-height: 360px;
+            margin-right: 5px;
+        }
+
+        @include max-width(414) {
+            min-height: 260px;
+        }
     }
 
     &__title {
@@ -76,6 +105,14 @@
         line-height: 1;
         margin-bottom: 28px;
         @include rubik(700);
+
+        @include max-width(1200) {
+            font-size: 50px;
+        }
+
+        @include max-width(768) {
+            font-size: 30px;
+        }
     }
 
     &__text {
@@ -85,12 +122,28 @@
         line-height: 1.7;
         margin-bottom: 35px;
         max-width: 364px;
+
+        @include max-width(1200) {
+            font-size: 16px;
+        }
+
+        @include max-width(768) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
     }
 
     &__link {
         position: relative;
         padding: 18px 60px 13px 27px;
         max-width: 202px;
+
+        @include max-width(768) {
+            padding: 8px 54px 8px 10px;
+            max-width: 160px;
+            margin-bottom: 7px;
+        }
+
 
         &::after {
             content: '';
@@ -102,6 +155,10 @@
             position: absolute;
             top: 27px;
             right: 18px;
+
+            @include max-width(768) {
+                top: 19px;
+            }
         }
 
         &:hover {
@@ -113,11 +170,20 @@
 
     &__image {
         position: relative;
+
+        @include max-width(768) {
+            display: none;
+        }
     }
 
     &__picture {
         width: 645px;
         height: 264px;
         object-fit: contain;
+
+        @include max-width(1200) {
+            width: 500px;
+            height: 200px;
+        }
     }
 }

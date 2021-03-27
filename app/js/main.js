@@ -48,6 +48,11 @@ $(function () {
         // ratedFill: '#ffcc00',
     });
     
+    $('.menu__burger').on('click', function () {
+        $('.menu__list').toggleClass('menu__list--active');
+        $('.menu__burger').toggleClass('menu__burger--active');
+    });
+
     let mixerPopular = mixitup('.popular__content', {
         selectors: {
             control: '.js-popular-btn'
@@ -59,6 +64,5 @@ $(function () {
             control: '.js-design-btn'
         }
     });
-
 
 });

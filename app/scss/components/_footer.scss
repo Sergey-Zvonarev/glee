@@ -4,6 +4,14 @@
         justify-content: space-between;
         padding: 75px 0 64px;
         border-bottom: 1px solid #dae4e9;
+
+        @include max-width(768) {
+            flex-wrap: wrap;
+        }
+
+         @include max-width(414) {
+            text-align: center;
+         }
     }
 
     &__col {
@@ -17,6 +25,18 @@
 
         &:not(:last-child) {
             margin-right: 30px;
+        }
+
+        @include max-width(768) {
+
+            max-width: calc(50% - 15px);
+            .footer__top & {
+                margin-right: 0;
+            }
+        }
+
+        @include max-width(414) {
+            max-width: 100%;
         }
     }
 
@@ -45,6 +65,10 @@
     &__item {
         &--addres {
             max-width: 185px;
+
+             @include max-width(414) {
+                 max-width: 100%;
+             }
         }
     }
 
@@ -94,6 +118,10 @@
     .menu__list {
         display: flex;
         line-height: 1;
+
+        @include max-width(1200) {
+            display: none;
+        }
     }
 
     .menu__item {

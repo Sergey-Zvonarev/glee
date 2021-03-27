@@ -9,7 +9,19 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px 30px;
-        margin-bottom: 115px
+        margin-bottom: 115px;
+
+        @include max-width(1200) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include max-width(768) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @include max-width(414) {
+            margin-bottom: 80px;
+        }
     }
 }
 
@@ -20,6 +32,16 @@
     min-height: 245px;
     background-color: $design;
     overflow: hidden;
+
+    @include max-width(1200) {
+        width: 100%;
+    }
+
+    @include max-width(768) {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 
     &__content {
         padding: 35px;
@@ -61,6 +83,10 @@
         position: absolute;
         right: -77px;
         bottom: 0;
+
+        @include max-width(768) {
+           right: -10px;
+        }
     }
 
     &__picture {
@@ -68,5 +94,9 @@
         width: 341px;
         margin: 0 auto;
         object-fit: contain;
+
+        @include max-width(768) {
+            width: 250px;
+        }
     }
 }

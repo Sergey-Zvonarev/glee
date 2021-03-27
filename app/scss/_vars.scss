@@ -15,6 +15,15 @@ $design:#f8f8f8;
 $insights: #262626;
 $input: #234969;
 
+// ===========MEDIA ЗАПРОСЫ==================
+@mixin max-width($width) {
+    @media only screen and (max-width: $width + "px") {
+        @content;
+    }
+}
+
+
+// ===========ОБРЕЗАЕТ ТЕКСТ==================
 @mixin line-clamp($lines) {
     display: -webkit-box;
     overflow: hidden;
@@ -22,6 +31,8 @@ $input: #234969;
     -webkit-box-orient: vertical;
 }
 
+
+// ===========ШРИФТЫ==================
 @mixin dmsans($weight) {
         font-family: "DMSans", sans-serif;
         font-weight: $weight;
@@ -37,6 +48,8 @@ $input: #234969;
     font-weight: $weight;
 }
 
+
+// ===========КНОПКИ==================
 %hover {
     color: $accent;
 }

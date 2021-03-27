@@ -46,6 +46,12 @@ body {
         object-fit: contain;
         width: 145px;
         height: 45px;
+
+        @include max-width(414) {
+            width: 90px;
+            height: 25px;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -75,6 +81,11 @@ body {
     color: $title;
     @include dmsans(700);
     text-align: center;
+
+    @include max-width(414) {
+        font-size: 30px;
+        line-height: 1.3;
+    }
 }
 
 .filter {
@@ -89,6 +100,12 @@ body {
 
         &:not(:last-child) {
             margin-right: 19px;
+        }
+
+        @include max-width(414) {
+            .filter & {
+                margin-right: 10px;
+            }
         }
     }
 
@@ -111,6 +128,14 @@ body {
         &:active {
             background-color: $default;
         }
+
+        @include max-width(414) {
+            font-size: 14px;
+        }
+    }
+
+    @include max-width(414) {
+        flex-wrap: wrap;
     }
 }
 
@@ -170,6 +195,14 @@ body {
 .email-form {
     display: flex;
 
+    @include max-width(768) {
+        align-items: baseline;
+    }
+
+    @include max-width(414) {
+        justify-content: center;
+    }
+
     &__input {
         height: 38px;
         width: 170px;
@@ -193,6 +226,12 @@ body {
         &:hover {
             background-color: $accent;
         }
+
+        @include max-width(768) {
+            height: 28px;
+            width: 100px;
+            padding: 5px 10px 5px 10px;
+        }
     }
 
     &__btn {
@@ -200,5 +239,10 @@ body {
         font-size: 14px;
         border: none;
         padding: 0px 23px 0 22px;
+
+        @include max-width(768) {
+            height: 28px;
+            padding: 0px 10px 0 10px;
+        }
     }
 }
