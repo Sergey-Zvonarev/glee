@@ -12,39 +12,49 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="menu">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__inner">
+
                     <a class="logo header__logo" href="#">
                         <img class="logo__image" src="images/content/logo.png" alt="logo">
                     </a>
+                    <nav class="menu">
+                        <button class="menu__burger" type="button">
+                            <span class="visually-hidden">
+                                Burger menu
+                            </span>
+                            <svg class="navigation__icon">
+                                <use xlink:href="images/sprite.svg#burger-menu"></use>
+                            </svg>
+                        </button>
+                        <ul class="menu__list">
 
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">Home+</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">About</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Services</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Pages+</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">News</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Contact</a>
-                        </li>
-                    </ul>
-
+                            <li class="menu__item">
+                                <a class="menu__link menu__link--active" href="#">Home+</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Services</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Pages+</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">News</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="navigation">
                         <div class="navigation__inner">
                             <div class="navigation__box">
                                 <button class="navigation__btn  navigation__btn--search" type="button">
-                                    <span class="visually-hidden">Иконка поиск</span>
+                                    <span class="visually-hidden">Search</span>
                                     <svg class="navigation__icon">
                                         <use xlink:href="images/sprite.svg#icon-search"></use>
                                     </svg>
@@ -54,7 +64,7 @@
                             <div class="navigation__box navigation__box--heart-basket">
                                 <div class="navigation__item">
                                     <button class="navigation__btn navigation__btn--heart" type="button">
-                                        <span class="visually-hidden">Иконка избранное</span>
+                                        <span class="visually-hidden">Favorites</span>
 
                                         <svg class="navigation__icon">
                                             <use xlink:href="images/sprite.svg#icon-heart"></use>
@@ -65,7 +75,7 @@
                                 <span class="navigation__line"></span>
                                 <div class="navigation__item">
                                     <button class="navigation__btn navigation__btn--basket" type="button">
-                                        <span class="visually-hidden">Иконка корзины</span>
+                                        <span class="visually-hidden">Basket</span>
                                         <span class="navigation__num">0</span>
 
                                         <svg class="navigation__icon">
@@ -77,7 +87,7 @@
 
                             <div class="navigation__box">
                                 <button class="navigation__btn  navigation__btn--burgermenu" type="button">
-                                    <span class="visually-hidden">Иконка бургер меню</span>
+                                    <span class="visually-hidden">Burger menu</span>
                                     <svg class="navigation__icon navigation__icon--burger-menu">
                                         <use xlink:href="images/sprite.svg#icon-ellipse"></use>
                                     </svg>
@@ -85,29 +95,33 @@
                             </div>
                         </div>
                     </div>
-                </nav>
+
+                </div>
             </div>
         </div>
+
     </header>
+
 
     <main class="main">
 
-        <section class="log">
+
+        <section class="breadcrumbs">
             <div class="container">
-                <div class="log__inner">
-                    <h2 class="log__title">
+                <div class="breadcrumbs__inner">
+                    <h2 class="breadcrumbs__title">
                         Log in
                     </h2>
-                    <div class="breadcrumbs">
-                        <ul class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Home</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Log in</a>
-                            </li>
-                        </ul>
-                    </div>
+
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Log in</a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </section>
@@ -141,42 +155,42 @@
             </form>
         </section>
 
-    <div class="partners partners--login">
-        <div class="container container--min">
-            <div class="partners__inner">
-                <ul class="partners__list">
-                    <li class="partners__item">
-                        <a class="partners__link" href="#">
-                            <img class="partners__picture" src="images/content/partners/1.png" alt="partners">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a class="partners__link" href="#">
-                            <img class="partners__picture" src="images/content/partners/2.png" alt="partners">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a class="partners__link" href="#">
-                            <img class="partners__picture" src="images/content/partners/3.png" alt="partners">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a class="partners__link" href="#">
-                            <img class="partners__picture" src="images/content/partners/4.png" alt="partners">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a class="partners__link" href="#">
-                            <img class="partners__picture" src="images/content/partners/5.png" alt="partners">
-                        </a>
-                    </li>
-                </ul>
+        <div class="partners partners--login">
+            <div class="container container--min">
+                <div class="partners__inner">
+                    <ul class="partners__list">
+                        <li class="partners__item">
+                            <a class="partners__link" href="#">
+                                <img class="partners__picture" src="images/content/partners/1.png" alt="partners">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#">
+                                <img class="partners__picture" src="images/content/partners/2.png" alt="partners">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#">
+                                <img class="partners__picture" src="images/content/partners/3.png" alt="partners">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#">
+                                <img class="partners__picture" src="images/content/partners/4.png" alt="partners">
+                            </a>
+                        </li>
+                        <li class="partners__item">
+                            <a class="partners__link" href="#">
+                                <img class="partners__picture" src="images/content/partners/5.png" alt="partners">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
             </div>
-    
-    
-    
         </div>
-    </div>
 
     </main>
 

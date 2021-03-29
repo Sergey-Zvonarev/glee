@@ -1,0 +1,94 @@
+.modal {
+    padding: 110px 0;
+    max-width: 485px;
+    margin: 0 auto;
+
+    &__label {
+        display: block;
+        margin-bottom: 25px;
+        color: $link;
+
+        &--border {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 25px;
+            border-bottom: 1px solid $search;
+        }
+    }
+
+    &__registred {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__account {
+        display: block;
+        @include rubik(500);
+        color: $default;
+        width: 100%;
+        padding: 18px;
+        border: 1px solid $btn;
+        background-color: transparent;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            @extend %hover;
+        }
+
+        &:active {
+            @extend %active;
+        }
+    }
+
+    &__input {
+        display: block;
+        height: 60px;
+        width: 100%;
+        margin-top: 4px;
+        border: 1px solid #f6f6f6;
+        padding: 0 15px;
+        transition: outline 0.5s, box-shadow 0.5s, background-color 0.5s, color 0.5s;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $accent;
+        }
+
+        &:hover {
+            background-color: $accent;
+        }
+
+        &:active {
+            background-color: $accent;
+            color: $link;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        padding: 18px;
+        border: none;
+        background-color: $btn;
+        font-size: 18px;
+        @include rubik(500);
+        color: #fffefe;
+        margin-bottom: 23px;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            @extend %hover;
+        }
+
+        &:active {
+            @extend %active;
+        }
+    }
+}

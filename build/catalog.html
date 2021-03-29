@@ -11,41 +11,50 @@
 </head>
 
 <body>
-    <div class="star"></div>
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="menu">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__inner">
+
                     <a class="logo header__logo" href="#">
                         <img class="logo__image" src="images/content/logo.png" alt="logo">
                     </a>
+                    <nav class="menu">
+                        <button class="menu__burger" type="button">
+                            <span class="visually-hidden">
+                                Burger menu
+                            </span>
+                            <svg class="navigation__icon">
+                                <use xlink:href="images/sprite.svg#burger-menu"></use>
+                            </svg>
+                        </button>
+                        <ul class="menu__list">
 
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">Home+</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">About</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Services</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Pages+</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">News</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Contact</a>
-                        </li>
-                    </ul>
-
+                            <li class="menu__item">
+                                <a class="menu__link menu__link--active" href="#">Home+</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Services</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Pages+</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">News</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="navigation">
                         <div class="navigation__inner">
                             <div class="navigation__box">
                                 <button class="navigation__btn  navigation__btn--search" type="button">
-                                    <span class="visually-hidden">Иконка поиск</span>
+                                    <span class="visually-hidden">Search</span>
                                     <svg class="navigation__icon">
                                         <use xlink:href="images/sprite.svg#icon-search"></use>
                                     </svg>
@@ -55,7 +64,7 @@
                             <div class="navigation__box navigation__box--heart-basket">
                                 <div class="navigation__item">
                                     <button class="navigation__btn navigation__btn--heart" type="button">
-                                        <span class="visually-hidden">Иконка избранное</span>
+                                        <span class="visually-hidden">Favorites</span>
 
                                         <svg class="navigation__icon">
                                             <use xlink:href="images/sprite.svg#icon-heart"></use>
@@ -66,7 +75,7 @@
                                 <span class="navigation__line"></span>
                                 <div class="navigation__item">
                                     <button class="navigation__btn navigation__btn--basket" type="button">
-                                        <span class="visually-hidden">Иконка корзины</span>
+                                        <span class="visually-hidden">Basket</span>
                                         <span class="navigation__num">0</span>
 
                                         <svg class="navigation__icon">
@@ -78,7 +87,7 @@
 
                             <div class="navigation__box">
                                 <button class="navigation__btn  navigation__btn--burgermenu" type="button">
-                                    <span class="visually-hidden">Иконка бургер меню</span>
+                                    <span class="visually-hidden">Burger menu</span>
                                     <svg class="navigation__icon navigation__icon--burger-menu">
                                         <use xlink:href="images/sprite.svg#icon-ellipse"></use>
                                     </svg>
@@ -86,29 +95,31 @@
                             </div>
                         </div>
                     </div>
-                </nav>
+
+                </div>
             </div>
         </div>
+
     </header>
 
     <main class="main">
 
-        <section class="log">
+        <section class="breadcrumbs">
             <div class="container">
-                <div class="log__inner">
-                    <h2 class="log__title">
-                        Products list 1
+                <div class="breadcrumbs__inner">
+                    <h2 class="breadcrumbs__title">
+                        Product list 1
                     </h2>
-                    <div class="breadcrumbs">
-                        <ul class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Home</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Products list 1</a>
-                            </li>
-                        </ul>
-                    </div>
+
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Product list 1</a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </section>
@@ -159,17 +170,17 @@
                             </form>
                         </div>
 
-                        <div class="filter-price catalog__item">
+                        <div class="filter-price catalog__item catalog__item--mb">
                             <h3 class="catalog-title">Price</h3>
                             <form class="filter-price__form" action="#">
                                 <input class="filter-price__input" name="range" data-min="100" data-max="500"
-                                    data-from="200" data-to="400">
+                                    data-from="200" data-to="400" >
                                 <label class="filter-price__label">
                                     <div class="filter-price__left">
-                                        $<span class="filter-price__from">1</span>
+                                        $<span class="filter-price__from">1</span>.00
                                     </div>
                                     <div class="filter-price__right">
-                                        $<span class="filter-price__to">2</span>
+                                        $<span class="filter-price__to">2</span>.00
                                     </div>
                                 </label>
                                 <button class="visually-hidden"></button>
@@ -228,29 +239,49 @@
                                 <li class="filter-recent__item">
                                     <a class="filter-recent__link" href="#">
                                         <div class="filter-recent__image">
-                                            <img class="filter-recent__picture" src="images/content/products/lamp-3.png" alt="pendant lamp">
+                                            <img class="filter-recent__picture"
+                                                src="images/content/products/lamp-mini-1.png" alt="pendant lamp">
                                         </div>
                                         <div class="filter-recen__content">
                                             <h3 class="filter-recent__title">
                                                 Pendant lamp
                                             </h3>
-                                            <!-- <div class="star" data-rateyo-rating="4"></div> -->
-                                            <span class="filter-recent__price">
-                                                23$
+                                            <div class="star" data-rateyo-rating="4"></div>
+                                            23$
                                             </span>
                                         </div>
-
-                                    </a>
-                                    <div class="star" data-rateyo-rating="4"></div>
-                                </li>
-                                <li class="filter-recent__item">
-                                    <a class="filter-recent__link" href="#">
-
                                     </a>
                                 </li>
                                 <li class="filter-recent__item">
                                     <a class="filter-recent__link" href="#">
-
+                                        <div class="filter-recent__image">
+                                            <img class="filter-recent__picture"
+                                                src="images/content/products/lamp-mini-2.png" alt="pendant lamp">
+                                        </div>
+                                        <div class="filter-recen__content">
+                                            <h3 class="filter-recent__title">
+                                                Pendant lamp
+                                            </h3>
+                                            <div class="star" data-rateyo-rating="4"></div>
+                                            23$
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="filter-recent__item">
+                                    <a class="filter-recent__link" href="#">
+                                        <div class="filter-recent__image">
+                                            <img class="filter-recent__picture"
+                                                src="images/content/products/lamp-mini-3.png" alt="pendant lamp">
+                                        </div>
+                                        <div class="filter-recen__content">
+                                            <h3 class="filter-recent__title">
+                                                Pendant lamp
+                                            </h3>
+                                            <div class="star" data-rateyo-rating="4"></div>
+                                            23$
+                                            </span>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>

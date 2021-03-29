@@ -1,0 +1,169 @@
+.creative {
+    padding: 115px 0 120px;
+
+    @include max-width(990) {
+        padding: 80px 0 90px;
+    }
+
+    &__inner {
+        display: flex;
+
+        @include max-width(990) {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: 50%;
+        height: 675px;
+        margin-right: 30px;
+
+        @include max-width(990) {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    &__picture {
+        object-fit: cover;
+        width: 570px;
+        height: 675px;
+
+        @include max-width(990) {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    &__content {
+        width: 50%;
+        padding-top: 65px;
+        padding-left: 20px;
+
+        @include max-width(990) {
+            width: 100%;
+        }
+    }
+
+    &__numbers {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+    }
+
+    &__number {
+        @include rubik(700);
+        font-size: 140px;
+        color: $btn;
+        margin-right: 25px;
+        line-height: 1;
+
+        @include max-width(990) {
+            font-size: 115px;
+        }
+    }
+
+    &__years {
+        padding-top: 22px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        @include line-clamp(2);
+        @include dmsans(700);
+        font-size: 36px;
+        margin-bottom: 21px;
+    }
+
+    &__desc {
+        @include line-clamp(5);
+    }
+
+    &__review {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 34px;
+        border-top: 3px solid #ebeef3;
+
+        @include max-width(768) {
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 60px;
+        padding-right: 18px;
+
+        @include max-width(768) {
+            margin-bottom: 20px;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #ebeef3;
+            margin-right: 10px;
+
+            @include max-width(990) {
+                border-right: none;
+            }
+
+            @include max-width(768) {
+                margin-right: 0;
+                ;
+            }
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: -7px;
+            width: 45px;
+            height: 45px;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        &--projects {
+
+            &::before {
+                background-image: url('..//images/content/icons/creative-review-1.svg');
+            }
+
+        }
+
+        &--revenue {
+            &::before {
+                background-image: url('..//images/content/icons/creative-review-2.svg');
+            }
+        }
+
+        &--awards {
+            &::before {
+                background-image: url('..//images/content/icons/creative-review-3.svg');
+            }
+        }
+    }
+
+    &__item-number {
+        @include dmsans(700);
+        font-size: 36px;
+        line-height: 1;
+
+        @include max-width(768) {
+            font-size: 20px;
+        }
+    }
+
+    &__item-desc {
+        @include dmsans(700);
+        color: #4c4c4c;
+    }
+}

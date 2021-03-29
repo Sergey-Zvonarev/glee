@@ -1,10 +1,18 @@
 .video {
     position: relative;
-    min-height: 500px;
+    height: 500px;
 
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @include max-width(768) {
+        min-height: 400px;
+    }
+
+    @include max-width(768) {
+        min-height: 300px;
+    }
 
     &__link {
         position: absolute;
@@ -42,13 +50,5 @@
         &:hover {
             background-color: rgba(#000000, 0.5);
         }
-    }
-
-    @include max-width(768) {
-        min-height: 400px;
-    }
-
-    @include max-width(768) {
-        min-height: 300px;
     }
 }

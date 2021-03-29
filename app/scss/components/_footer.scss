@@ -9,9 +9,9 @@
             flex-wrap: wrap;
         }
 
-         @include max-width(414) {
+        @include max-width(414) {
             text-align: center;
-         }
+        }
     }
 
     &__col {
@@ -23,20 +23,27 @@
         max-width: 300px;
         width: 100%;
 
-        &:not(:last-child) {
-            margin-right: 30px;
+        @include max-width(768) {
+            max-width: calc(50% - 15px);
         }
 
-        @include max-width(768) {
+        .footer__top & {
 
-            max-width: calc(50% - 15px);
-            .footer__top & {
+            @include max-width(768) {
                 margin-right: 0;
             }
         }
 
         @include max-width(414) {
             max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include max-width(768) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -66,9 +73,9 @@
         &--addres {
             max-width: 185px;
 
-             @include max-width(414) {
-                 max-width: 100%;
-             }
+            @include max-width(414) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -76,7 +83,7 @@
         margin-bottom: 20px;
     }
 
-    &__content {
+    &__link {
         font-size: 14px;
         @include rubik(400);
         color: $connection;
@@ -89,11 +96,10 @@
         }
 
         &:hover {
-            color: $accent;
+            text-decoration: underline;
         }
 
         &:active {
-            background-color: $accent;
             color: $link;
         }
     }
@@ -118,10 +124,6 @@
     .menu__list {
         display: flex;
         line-height: 1;
-
-        @include max-width(1200) {
-            display: none;
-        }
     }
 
     .menu__item {
@@ -145,11 +147,10 @@
         }
 
         &:hover {
-            color: $accent;
+            text-decoration: underline;
         }
 
         &:active {
-            background-color: $accent;
             color: $link;
         }
     }

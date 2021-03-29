@@ -1,0 +1,80 @@
+.description {
+    background-color: $accent;
+    padding: 84px 0 75px 0;
+
+    &--mb {
+        margin-bottom: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+
+        @include max-width(768) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        position: relative;
+        text-align: center;
+        @include dmsans(700);
+        padding-top: 80px;
+
+        @include max-width(768) {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+
+        @include max-width(414) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 70px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &--clients {
+            &::before {
+                background-image: url('..//images/content/icons/description-1.svg');
+            }
+        }
+
+        &--products {
+            &::before {
+                background-image: url('..//images/content/icons/description-2.svg');
+            }
+        }
+
+        &--time {
+            &::before {
+                background-image: url('..//images/content/icons/description-3.svg');
+            }
+        }
+
+        &--brands {
+            &::before {
+                background-image: url('..//images/content/icons/description-4.svg');
+            }
+        }
+    }
+
+    &__number {
+        font-size: 36px;
+        line-height: 1.4;
+    }
+
+    &__text {
+        color: #4c4c4c;
+    }
+}

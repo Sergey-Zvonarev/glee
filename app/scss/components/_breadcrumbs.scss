@@ -1,0 +1,51 @@
+.breadcrumbs {
+    padding: 30px 0 24px;
+    background-color: $search;
+    margin-top: 145px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include rubik(400);
+        font-size: 32px;
+        color: #222933;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        color: #888c91;
+        padding-right: 20px;
+
+        &:last-child {
+            color: $input;
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: '/';
+            position: absolute;
+            right: 6px;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 1.7;
+        color: inherit;
+    }
+}

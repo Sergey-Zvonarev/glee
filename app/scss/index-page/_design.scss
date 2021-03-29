@@ -3,6 +3,10 @@
 
     &__filter {
         margin-bottom: 75px;
+
+        @include max-width(414) {
+            margin-bottom: 40px;
+        }
     }
 
     &__inner {
@@ -29,7 +33,7 @@
     position: relative;
 
     width: 370px;
-    min-height: 245px;
+    height: 245px;
     background-color: $design;
     overflow: hidden;
 
@@ -58,11 +62,11 @@
         }
 
         &:hover {
-            @extend %hover;
+            text-decoration: underline;
         }
 
         &:active {
-            @extend %active;
+            color: $link;
         }
     }
 
@@ -85,7 +89,7 @@
         bottom: 0;
 
         @include max-width(768) {
-           right: -10px;
+            right: -10px;
         }
     }
 

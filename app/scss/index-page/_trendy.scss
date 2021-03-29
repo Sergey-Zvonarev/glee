@@ -1,4 +1,10 @@
 .trendy {
+    margin-top: 150px;
+
+    @include max-width(768) {
+        margin-top: 100px;
+    }
+
     .slick-dots {
         position: absolute;
         bottom: 45px;
@@ -70,6 +76,10 @@
     &__inner {
         display: flex;
         align-items: center;
+
+        @include max-width(414) {
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -94,6 +104,7 @@
 
         @include max-width(414) {
             min-height: 260px;
+            padding-bottom: 0;
         }
     }
 
@@ -170,10 +181,6 @@
 
     &__image {
         position: relative;
-
-        @include max-width(768) {
-            display: none;
-        }
     }
 
     &__picture {
@@ -183,6 +190,11 @@
 
         @include max-width(1200) {
             width: 500px;
+            height: 200px;
+        }
+
+        @include max-width(768) {
+            width: 300px;
             height: 200px;
         }
     }

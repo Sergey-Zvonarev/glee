@@ -1,24 +1,40 @@
 .header {
+    position: relative;
+
+    &__top {
+        position: fixed;
+        z-index: 11;
+        right: 0;
+        left: 0;
+        background-color: $bg;
+
+        @include max-width(768) {
+            align-items: center;
+            padding: 30px 0;
+        }
+    }
+
     &__inner {
+
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
 
         @include max-width(768) {
             align-items: center;
+            padding: 0 0;
         }
     }
 
     &__logo {
         position: relative;
-        z-index: 11;
+        z-index: 15;
         margin-right: 154px;
 
         @include max-width(1200) {
             order: 1;
             margin-right: 0;
         }
-
     }
 }
 
@@ -68,12 +84,6 @@
         background-color: transparent;
         padding: 0;
 
-        svg {
-            fill: $default;
-            width: 40px;
-            height: 35px;
-        }
-
         @include max-width(1200) {
             display: block;
 
@@ -83,25 +93,43 @@
                 }
             }
         }
+
+        svg {
+            fill: $default;
+            width: 40px;
+            height: 35px;
+        }
     }
 
     &__item {
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
 
         @include max-width(1200) {
             .menu__list & {
                 margin-right: 0;
             }
         }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include max-width(1200) {
+                margin-right: 0;
+            }
+        }
     }
 
     &__link {
-        @include rubik(700);
+        @include rubik(500);
+        font-size: 15px;
         color: $link;
         padding: 2px;
         transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+
+        @include max-width(1200) {
+            display: block;
+            padding: 15px 0;
+
+        }
 
         &:focus {
             outline: transparent;
@@ -109,28 +137,25 @@
         }
 
         &:hover {
-            color: $accent;
+            text-decoration: underline;
         }
 
         &:active {
-            background-color: $default;
-        }
-
-        @include max-width(1200) {
-            display: block;
-            padding: 15px 0;
-
-            &:hover {
-                background-color: $default;
-            }
+            color: $link;
         }
     }
 }
 
 .navigation {
+
     @include max-width(1200) {
         order: 2;
     }
+
+    @include max-width(768) {
+        margin-left: auto;
+    }
+
 
     &__icon {
         width: 18px;
@@ -185,28 +210,29 @@
 
     &__box {
 
+        .navigation__inner & {
+            @include max-width(768) {
+                margin-right: 10px;
+            }
+
+            @include max-width(414) {
+                margin-right: 0;
+            }
+        }
+
         &:not(:last-child) {
             margin-right: 20px;
+
+            @include max-width(768) {
+                margin-right: 0;
+            }
+
         }
 
         &--heart-basket {
             position: relative;
             display: flex;
         }
-
-
-        @include max-width(768) {
-            .navigation__inner & {
-                margin-right: 10px;
-            }
-        }
-
-        @include max-width(414) {
-            .navigation__inner & {
-                margin-right: 0;
-            }
-        }
-
     }
 
     &__item {
@@ -250,7 +276,6 @@
         }
 
         &:active {
-            background-color: $btn;
             color: $link;
         }
 
@@ -277,11 +302,17 @@
                 outline: transparent;
                 box-shadow: 0 0 0 2px $accent;
                 border-radius: 46px 0 0 46px;
+
+                @include max-width(768) {
+                    border-radius: 50%;
+                }
             }
 
             &:hover {
                 position: relative;
                 z-index: 2;
+
+
             }
         }
 
@@ -308,6 +339,10 @@
                 outline: transparent;
                 box-shadow: 0 0 0 2px $accent;
                 border-radius: 0 46px 46px 0;
+
+                @include max-width(768) {
+                    border-radius: 50%;
+                }
             }
         }
     }
