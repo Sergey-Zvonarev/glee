@@ -1,0 +1,42 @@
+.filter-price {
+    .irs--flat .irs-line {
+        top: 25px;
+        height: 4px;
+        background-color: #c2d2db;
+        border-radius: 1px;
+    }
+
+    .irs--flat .irs-bar {
+        top: 25px;
+        height: 4px;
+        background-color: #a3bbc8;
+    }
+
+    .irs--flat .irs-handle {
+        top: 19px;
+        width: 16px;
+        height: 16px;
+        background-color: #a3bbc8;
+        cursor: pointer;
+    }
+
+    .irs--flat .irs-handle>i:first-child {
+        display: none;
+    }
+
+    .irs--flat .irs-min,
+    .irs--flat .irs-max {
+        display: none;
+    }
+
+    .irs--flat .irs-from,
+    .irs--flat .irs-to,
+    .irs--flat .irs-single {
+        display: none;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+    }
+}

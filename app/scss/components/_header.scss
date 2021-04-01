@@ -1,16 +1,112 @@
 .header {
     position: relative;
 
+    .menu {
+        width: 100%;
+
+        @include max-width(1200) {
+            order: 3;
+        }
+
+        @include max-width(768) {
+            margin-right: 0;
+        }
+
+        &__list {
+
+            &.menu__list--active {
+                @include max-width(1200) {
+                    transform: translateY(0);
+                    box-shadow: 0 0 20px $default;
+                }
+            }
+
+            @include max-width(1200) {
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: 10;
+                top: 0;
+                text-align: center;
+                padding: 115px 0 15px;
+                background-color: $orange;
+                transform: translatey(-200%);
+                transition: transform 0.5s;
+
+            }
+        }
+
+        &__burger {
+            order: 3;
+
+            @include max-width(1200) {
+                display: block;
+            }
+
+            &.menu__burger--active {
+                svg {
+                    @include max-width(1200) {
+                        fill: $btn;
+                    }
+                }
+            }
+
+            svg {
+                fill: $default;
+                width: 40px;
+                height: 35px;
+            }
+        }
+
+        &__item {
+            @include max-width(1200) {
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__link {
+            @include max-width(1200) {
+                display: block;
+                padding: 15px 0;
+
+            }
+        }
+    }
+
     &__top {
-        position: fixed;
-        z-index: 11;
-        right: 0;
-        left: 0;
         background-color: $bg;
+
+        &.header__top--scroll {
+            @include max-width(768) {
+                padding: 5px 0;
+            }
+
+            .header__inner {
+                padding: 10px 0;
+                transition: padding 1s;
+
+                @include max-width(768) {
+                    padding: 0;
+                }
+            }
+        }
+
+        &--scroll {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 50;
+            box-shadow: 0 0 20px $default;
+            transition: all 1s;
+        }
 
         @include max-width(768) {
             align-items: center;
-            padding: 30px 0;
+            padding: 20px 0;
         }
     }
 
@@ -38,318 +134,5 @@
     }
 }
 
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 30px;
 
-    @include max-width(1200) {
-        order: 3;
-    }
 
-    @include max-width(768) {
-        margin-right: 0;
-    }
-
-    &__list {
-        display: flex;
-        align-items: center;
-
-        @include max-width(1200) {
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            z-index: 10;
-            top: 0;
-            text-align: center;
-            padding: 115px 0 15px;
-            background-color: $lamps;
-            transform: translatey(-200%);
-            transition: transform 0.5s;
-
-            &.menu__list--active {
-                transform: translateY(0);
-            }
-        }
-    }
-
-    &__burger {
-        position: relative;
-        z-index: 11;
-        display: none;
-        border: none;
-        font-size: 0;
-        background-color: transparent;
-        padding: 0;
-
-        @include max-width(1200) {
-            display: block;
-
-            &.menu__burger--active {
-                svg {
-                    fill: $btn;
-                }
-            }
-        }
-
-        svg {
-            fill: $default;
-            width: 40px;
-            height: 35px;
-        }
-    }
-
-    &__item {
-
-        @include max-width(1200) {
-            .menu__list & {
-                margin-right: 0;
-            }
-        }
-
-        &:not(:last-child) {
-            margin-right: 30px;
-
-            @include max-width(1200) {
-                margin-right: 0;
-            }
-        }
-    }
-
-    &__link {
-        @include rubik(500);
-        font-size: 15px;
-        color: $link;
-        padding: 2px;
-        transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
-
-        @include max-width(1200) {
-            display: block;
-            padding: 15px 0;
-
-        }
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 1px $default;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:active {
-            color: $link;
-        }
-    }
-}
-
-.navigation {
-
-    @include max-width(1200) {
-        order: 2;
-    }
-
-    @include max-width(768) {
-        margin-left: auto;
-    }
-
-
-    &__icon {
-        width: 18px;
-        height: 16px;
-        fill: $default;
-
-        &--burger-menu {
-            fill: $bg;
-        }
-    }
-
-    &__line {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: $bg;
-        width: 1px;
-        height: 32px;
-
-        @include max-width(768) {
-            display: none;
-        }
-    }
-
-    &__num {
-        position: absolute;
-
-        top: 8px;
-        right: 29px;
-        width: 15px;
-        height: 15px;
-        background-color: $bg;
-        border-radius: 50%;
-        font-size: 10px;
-        text-align: center;
-        line-height: 1.6;
-
-        @include max-width(768) {
-            background-color: $accent;
-            top: 0;
-            right: 0;
-        }
-
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__box {
-
-        .navigation__inner & {
-            @include max-width(768) {
-                margin-right: 10px;
-            }
-
-            @include max-width(414) {
-                margin-right: 0;
-            }
-        }
-
-        &:not(:last-child) {
-            margin-right: 20px;
-
-            @include max-width(768) {
-                margin-right: 0;
-            }
-
-        }
-
-        &--heart-basket {
-            position: relative;
-            display: flex;
-        }
-    }
-
-    &__item {
-
-        @include max-width(768) {
-            margin-right: 10px;
-        }
-    }
-
-    &__btn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        border: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
-
-        @include max-width(768) {
-            width: 30px;
-            height: 30px;
-        }
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 2px $accent;
-            border-radius: 50%;
-        }
-
-        &:hover {
-            .navigation__icon {
-                fill: $accent;
-            }
-
-            background-color: $link;
-            transform: scale(1.1);
-            box-shadow: 0 0 5px black;
-        }
-
-        &:active {
-            color: $link;
-        }
-
-        &--search {
-            background-color: $search;
-
-            @include max-width(768) {
-                background-color: transparent;
-            }
-        }
-
-        &--heart {
-            background: $accent;
-            border-radius: 46px 0 0 46px;
-            margin-right: 0;
-            width: 93px;
-
-            @include max-width(768) {
-                width: 35px;
-                background-color: transparent;
-            }
-
-            &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $accent;
-                border-radius: 46px 0 0 46px;
-
-                @include max-width(768) {
-                    border-radius: 50%;
-                }
-            }
-
-            &:hover {
-                position: relative;
-                z-index: 2;
-
-
-            }
-        }
-
-        &--burgermenu {
-            background-color: $btn;
-
-            @include max-width(768) {
-                display: none;
-            }
-
-        }
-
-        &--basket {
-            background-color: $accent;
-            border-radius: 0 46px 46px 0;
-            width: 93px;
-
-            @include max-width(768) {
-                background-color: transparent;
-                width: 35px;
-            }
-
-            &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $accent;
-                border-radius: 0 46px 46px 0;
-
-                @include max-width(768) {
-                    border-radius: 50%;
-                }
-            }
-        }
-    }
-
-    &__basket-heart {
-        display: flex;
-        position: relative;
-        margin-right: 20px;
-    }
-}

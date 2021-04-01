@@ -7,11 +7,11 @@
     background-repeat: no-repeat;
 
     @include max-width(768) {
-        min-height: 400px;
+       height: 400px;
     }
 
     @include max-width(768) {
-        min-height: 300px;
+        height: 300px;
     }
 
     &__link {

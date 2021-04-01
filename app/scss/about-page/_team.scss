@@ -1,6 +1,6 @@
 .team {
     padding-top: 60px;
-    padding-bottom: 36px;
+    padding-bottom: 60px;
 
     &__inner {
         display: flex;
@@ -25,38 +25,10 @@
         }
     }
 
-    &__card {
-        width: 370px;
-        min-height: 386px;
-
-        @include max-width(990) {
-            width: 47%;
-        }
-
-        @include max-width(768) {
-            width: 100%;
-        }
-    }
-
-    &__picture {
-        height: 320px;
-        width: 370px;
-        object-fit: cover;
-
-        @include max-width(990) {
-            width: 100%;
-        }
-    }
-
     .title {
         color: $default;
         text-align: left;
-    }
-
-    &__title {
-        @include max-width(1200) {
-            font-size: 30px;
-        }
+        margin-bottom: 10px;
     }
 
     &__link {
@@ -81,8 +53,10 @@
             height: 9px;
         }
 
-        &:hover::after {
-            background-image: url(../images/content/icons/arrow-right_hover.svg);
+        &:hover {
+            &::after {
+                background-image: url(../images/content/icons/arrow-right_hover.svg);
+            }
         }
     }
 
@@ -98,91 +72,9 @@
         }
     }
 
-    &__desc {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 335px;
-        background-color: $bg;
-        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
-        padding: 20px;
-        margin-top: -35px;
-        max-height: 110px;
-
-        @include max-width(990) {
-            width: 100%;
-        }
-    }
-
-    &__desc-content {
-        padding-top: 34px;
-    }
-
-    &__name {
-        @include line-clamp(2);
-        @include dmsans(700);
-        font-size: 22px;
-        line-height: 1.2;
-        color: $link;
-    }
-
     &__text {
         @include line-clamp(10);
         color: #565872;
         margin-bottom: 45px;
-    }
-
-    &__social {
-        display: flex;
-    }
-
-    &__social-link {
-        position: relative;
-        display: block;
-        width: 40px;
-        height: 40px;
-        background-color: #f6f6f6;
-        border-radius: 50%;
-        transition: background-color 0.5s;
-
-        &:focus {
-            @extend %focus;
-        }
-
-        &:hover {
-            background-color: $accent;
-        }
-
-        &:active {
-            background-color: $default;
-        }
-
-        &:not(:last-child) {
-            margin-right: 7px;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 18px;
-            height: 18px;
-            background-repeat: no-repeat;
-        }
-
-        &--instagramm {
-            &::before {
-                background-image: url('..//images/content/icons/instagramm.svg');
-            }
-        }
-
-        &--google {
-            &::before {
-                background-image: url('..//images/content/icons/google.svg');
-            }
-        }
     }
 }

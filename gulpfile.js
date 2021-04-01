@@ -59,6 +59,7 @@ function scripts() {
             'node_modules/magnific-popup/dist/jquery.magnific-popup.js', //установка magnific, но перед эти установить  npm install magnific-popup --save-dev
             'node_modules/rateyo/src/jquery.rateyo.js', //установка rateyo(рейтинг звезд), но перед эти установить  npm install rateyo@2.3.2 --save-dev
             'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js', //установка rangeslider(слйдер цены), но перед эти установить  npm install ion-rangeslider --save-dev
+              'node_modules/jquery-form-styler/dist/jquery.formstyler.js', //установка jquery-form-styler(стилизация select), но перед эти установить  npm i jquery-form-styler --save-dev
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))

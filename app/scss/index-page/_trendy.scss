@@ -1,9 +1,4 @@
 .trendy {
-    margin-top: 150px;
-
-    @include max-width(768) {
-        margin-top: 100px;
-    }
 
     .slick-dots {
         position: absolute;

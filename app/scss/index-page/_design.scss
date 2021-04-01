@@ -1,11 +1,19 @@
 .design {
     padding: 43px 0 55px;
 
+    @include max-width(768) {
+        padding: 30px 0 30px;
+    }
+
     &__filter {
         margin-bottom: 75px;
 
+        @include max-width(768) {
+            margin-bottom: 25px;
+        }
+
         @include max-width(414) {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
     }
 
@@ -21,6 +29,7 @@
 
         @include max-width(768) {
             grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 40px;
         }
 
         @include max-width(414) {
@@ -29,78 +38,3 @@
     }
 }
 
-.furniture {
-    position: relative;
-
-    width: 370px;
-    height: 245px;
-    background-color: $design;
-    overflow: hidden;
-
-    @include max-width(1200) {
-        width: 100%;
-    }
-
-    @include max-width(768) {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    &__content {
-        padding: 35px;
-        @include dmsans(700);
-        max-width: 241px;
-    }
-
-    &__link {
-        color: $title;
-        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
-
-        &:focus {
-            @extend %focus;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:active {
-            color: $link;
-        }
-    }
-
-    &__title {
-        @include line-clamp(2);
-        font-size: 20px;
-        color: $title;
-        line-height: 1.2;
-        margin-bottom: 9px;
-        width: 100%;
-    }
-
-    &__subtitle {
-        color: $btn;
-    }
-
-    &__image {
-        position: absolute;
-        right: -77px;
-        bottom: 0;
-
-        @include max-width(768) {
-            right: -10px;
-        }
-    }
-
-    &__picture {
-        height: 170px;
-        width: 341px;
-        margin: 0 auto;
-        object-fit: contain;
-
-        @include max-width(768) {
-            width: 250px;
-        }
-    }
-}

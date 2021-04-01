@@ -1,6 +1,10 @@
 .popular {
     padding: 53px 0 50px;
 
+    @include max-width(768) {
+        padding: 30px 0 30px;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 8px;
@@ -22,8 +26,12 @@
     &__filter {
         margin-bottom: 75px;
 
+        @include max-width(768) {
+            margin-bottom: 25px;
+        }
+
         @include max-width(414) {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
     }
 
@@ -47,10 +55,10 @@
             grid-gap: 30px 20px;
         }
 
-         @include max-width(610) {
+        @include max-width(610) {
             grid-template-columns: repeat(1, 1fr);
             max-width: 500px;
-         }
+        }
     }
 
     &__item {

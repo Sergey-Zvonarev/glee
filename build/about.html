@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>glee</title>
+    <link rel="icon" href="images/content/favicon.ico" type="image/x-icon">
+    <title>about</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,11 +15,11 @@
     <div class="header__top">
         <div class="container">
             <div class="header__inner">
-
-                <a class="logo header__logo" href="#">
-                    <img class="logo__image" src="images/content/logo.png" alt="logo">
-                </a>
                 <nav class="menu">
+                    <a class="logo header__logo" href="#">
+                        <img class="logo__image" src="images/content/logo.png" alt="logo">
+                    </a>
+
                     <button class="menu__burger" type="button">
                         <span class="visually-hidden">
                             Burger menu
@@ -49,53 +49,53 @@
                             <a class="menu__link" href="#">Contact</a>
                         </li>
                     </ul>
-                </nav>
-                <div class="navigation">
-                    <div class="navigation__inner">
-                        <div class="navigation__box">
-                            <button class="navigation__btn  navigation__btn--search" type="button">
-                                <span class="visually-hidden">Search</span>
-                                <svg class="navigation__icon">
-                                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                                </svg>
-                            </button>
-                        </div>
 
-                        <div class="navigation__box navigation__box--heart-basket">
-                            <div class="navigation__item">
-                                <button class="navigation__btn navigation__btn--heart" type="button">
-                                    <span class="visually-hidden">Favorites</span>
-
+                    <div class="navigation">
+                        <div class="navigation__inner">
+                            <div class="navigation__box">
+                                <button class="navigation__btn  navigation__btn--search" type="button">
+                                    <span class="visually-hidden">Search</span>
                                     <svg class="navigation__icon">
-                                        <use xlink:href="images/sprite.svg#icon-heart"></use>
-                                    </svg>
-                                    <span class="navigation__num">0</span>
-                                </button>
-                            </div>
-                            <span class="navigation__line"></span>
-                            <div class="navigation__item">
-                                <button class="navigation__btn navigation__btn--basket" type="button">
-                                    <span class="visually-hidden">Basket</span>
-                                    <span class="navigation__num">0</span>
-
-                                    <svg class="navigation__icon">
-                                        <use xlink:href="images/sprite.svg#icon-basket"></use>
+                                        <use xlink:href="images/sprite.svg#icon-search"></use>
                                     </svg>
                                 </button>
                             </div>
-                        </div>
 
-                        <div class="navigation__box">
-                            <button class="navigation__btn  navigation__btn--burgermenu" type="button">
-                                <span class="visually-hidden">Burger menu</span>
-                                <svg class="navigation__icon navigation__icon--burger-menu">
-                                    <use xlink:href="images/sprite.svg#icon-ellipse"></use>
-                                </svg>
-                            </button>
+                            <div class="navigation__box navigation__box--heart-basket">
+                                <div class="navigation__item">
+                                    <button class="navigation__btn navigation__btn--heart" type="button">
+                                        <span class="visually-hidden">Favorites</span>
+
+                                        <svg class="navigation__icon">
+                                            <use xlink:href="images/sprite.svg#icon-heart"></use>
+                                        </svg>
+                                        <span class="navigation__num">0</span>
+                                    </button>
+                                </div>
+                                <span class="navigation__line"></span>
+                                <div class="navigation__item">
+                                    <button class="navigation__btn navigation__btn--basket" type="button">
+                                        <span class="visually-hidden">Basket</span>
+                                        <span class="navigation__num">0</span>
+
+                                        <svg class="navigation__icon">
+                                            <use xlink:href="images/sprite.svg#icon-basket"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="navigation__box">
+                                <button class="navigation__btn  navigation__btn--burgermenu" type="button">
+                                    <span class="visually-hidden">Burger menu</span>
+                                    <svg class="navigation__icon navigation__icon--burger-menu">
+                                        <use xlink:href="images/sprite.svg#icon-ellipse"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </nav>
             </div>
         </div>
     </div>
@@ -105,11 +105,11 @@
     <h1 class="visually-hidden">
         About Glee online furniture store
     </h1>
-    <section class="breadcrumbs">
+    <div class="breadcrumbs">
     <div class="container">
         <div class="breadcrumbs__inner">
             <h2 class="breadcrumbs__title">
-                Product list 1
+                About Us
             </h2>
 
             <ul class="breadcrumbs__list">
@@ -117,13 +117,13 @@
                     <a class="breadcrumbs__link" href="#">Home</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">Product list 1</a>
+                    <a class="breadcrumbs__link" href="#">About Us</a>
                 </li>
             </ul>
 
         </div>
     </div>
-</section>
+</div>
     <section class="creative">
     <div class="container container--min">
         <div class="creative__inner">
@@ -171,7 +171,7 @@
         </div>
     </div>
 </section>
-    <div class="description description--mb">
+    <div class="description description__mb">
     <div class="container container--min">
         <div class="description__inner">
             <div class="description__item description__item--clients">
@@ -214,99 +214,99 @@
                 </div>
                 <a class="team__link btn" href="#">Join With US</a>
             </div>
-            <div class="team__gallery">
-                <div class="team__card">
-                    <img class="team__picture" src="images/content/team/1.jpg" alt="Eliza Elliot">
-                    <div class="team__desc">
-                        <div class="team__desc-content">
-                            <div class="team__name">
+            <ul class="team__gallery">
+                <li class="team-card">
+                    <img class="team-card__picture" src="images/content/team/1.jpg" alt="Eliza Elliot">
+                    <div class="team-card__desc">
+                        <div class="team-card__description">
+                            <div class="team-card__name">
                                 Eliza Elliot
                             </div>
-                            <div class="team__text">
+                            <div class="team-card__text">
                                 Commodo tempor
                             </div>
                         </div>
-                        <div class="team__social">
-                            <a class="team__social-link team__social-link--instagramm" href="#">
+                        <div class="team-card__social">
+                            <a class="team-card__social-link team-card__social-link--instagramm" href="#">
                                 <span class="visually-hidden">instagramm</span>
                             </a>
-                            <a class="team__social-link team__social-link--google" href="#">
+                            <a class="team-card__social-link team-card__social-link--google" href="#">
                                 <span class="visually-hidden">google</span>
                             </a>
                         </div>
 
                     </div>
-                </div>
+                </li>
 
-                <div class="team__card">
-                    <img class="team__picture" src="images/content/team/2.jpg" alt="Roscoe A.">
-                    <div class="team__desc">
-                        <div class="team__desc-content">
-                            <div class="team__name">
+                <li class="team-card">
+                    <img class="team-card__picture" src="images/content/team/2.jpg" alt="Roscoe A.">
+                    <div class="team-card__desc">
+                        <div class="team-card__description">
+                            <div class="team-card__name">
                                 Roscoe A.
                             </div>
-                            <div class="team__text">
+                            <div class="team-card__text">
                                 Commodo tempor
                             </div>
                         </div>
-                        <div class="team__social">
-                            <a class="team__social-link team__social-link--instagramm" href="#">
+                        <div class="team-card__social">
+                            <a class="team-card__social-link team-card__social-link--instagramm" href="#">
                                 <span class="visually-hidden">instagramm</span>
                             </a>
-                            <a class="team__social-link team__social-link--google" href="#">
+                            <a class="team-card__social-link team-card__social-link--google" href="#">
                                 <span class="visually-hidden">google</span>
                             </a>
                         </div>
 
                     </div>
-                </div>
+                </li>
 
-                <div class="team__card">
-                    <img class="team__picture" src="images/content/team/3.jpg" alt="Ruby M.">
-                    <div class="team__desc">
-                        <div class="team__desc-content">
-                            <div class="team__name">
+                <li class="team-card">
+                    <img class="team-card__picture" src="images/content/team/3.jpg" alt="Ruby M.">
+                    <div class="team-card__desc">
+                        <div class="team-card__description">
+                            <div class="team-card__name">
                                 Ruby M.
                             </div>
-                            <div class="team__text">
+                            <div class="team-card__text">
                                 Commodo tempor
                             </div>
                         </div>
-                        <div class="team__social">
-                            <a class="team__social-link team__social-link--instagramm" href="#">
+                        <div class="team-card__social">
+                            <a class="team-card__social-link team-card__social-link--instagramm" href="#">
                                 <span class="visually-hidden">instagramm</span>
                             </a>
-                            <a class="team__social-link team__social-link--google" href="#">
+                            <a class="team-card__social-link team-card__social-link--google" href="#">
                                 <span class="visually-hidden">google</span>
                             </a>
                         </div>
 
                     </div>
-                </div>
+                </li>
 
-                <div class="team__card">
-                    <img class="team__picture" src="images/content/team/4.jpg" alt="Marie F. Bloss">
-                    <div class="team__desc">
-                        <div class="team__desc-content">
-                            <div class="team__name">
+                <li class="team-card">
+                    <img class="team-card__picture" src="images/content/team/4.jpg" alt="Marie F. Bloss">
+                    <div class="team-card__desc">
+                        <div class="team-card__description">
+                            <div class="team-card__name">
                                 Marie F. Bloss
                             </div>
-                            <div class="team__text">
+                            <div class="team-card__text">
                                 Commodo tempor
                             </div>
                         </div>
-                        <div class="team__social">
-                            <a class="team__social-link team__social-link--instagramm" href="#">
+                        <div class="team-card__social">
+                            <a class="team-card__social-link team-card__social-link--instagramm" href="#">
                                 <span class="visually-hidden">instagramm</span>
                             </a>
-                            <a class="team__social-link team__social-link--google" href="#">
+                            <a class="team-card__social-link team-card__social-link--google" href="#">
                                 <span class="visually-hidden">google</span>
                             </a>
                         </div>
 
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
@@ -323,82 +323,87 @@
 
         <ul class="insights__inner">
             <li class="insights__item">
-                <article class="insight">
-                    <div class="insight__image">
-                        <img class="insight__picture" src="images/content/products/insights1.jpg"
+                <article class="insight-card">
+                    <div class="insight-card__image">
+                        <img class="insight-card__picture" src="images/content/products/insights1.jpg"
                             alt="Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam">
-                        <div class="insight__subtitle">
-                            <a href="#" class="insight__link">NEW</a>
+                        <div class="insight-card__subtitle">
+                            <a href="#" class="insight-card__link">New</a>
                         </div>
                     </div>
-
-                    <h3 class="insight__title">
-                        <a class="insight__title-link" href="#">
-                            Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam
-                        </a>
-                    </h3>
-                    <div class="insight__bottom">
-                        <time class="insight__date">
-                            28 JANUARY, 2020
-                        </time>
-                        <a class="insight__author" href="#">
-                            BY ADMIN
-                        </a>
-
+                    <div class="insight-card__content">
+                        <h3 class="insight-card__title">
+                            <a class="insight-card__title-link" href="#">
+                                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam
+                            </a>
+                        </h3>
+                        <div class="insight-card__bottom">
+                            <time class="insight-card__date">
+                                28 January, 2020
+                            </time>
+                            <a class="insight-card__author" href="#">
+                                By admin
+                            </a>
+    
+                        </div>
                     </div>
                 </article>
             </li>
 
             <li class="insights__item">
-                <article class="insight">
-                    <div class="insight__image">
-                        <img class="insight__picture" src="images/content/products/insights2.jpg"
+                <article class="insight-card">
+                    <div class="insight-card__image">
+                        <img class="insight-card__picture" src="images/content/products/insights2.jpg"
                             alt="Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore">
-                        <div class="insight__subtitle">
-                            <a href="#" class="insight__link">NEW</a>
+                        <div class="insight-card__subtitle">
+                            <a href="#" class="insight-card__link">New</a>
                         </div>
                     </div>
-                    <h3 class="insight__title">
-                        <a class="insight__title-link" href="#">
+                    <div class="insight-card__content">
+                    <h3 class="insight-card__title">
+                        <a class="insight-card__title-link" href="#">
                             Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore
                         </a>
                     </h3>
-                    <div class="insight__bottom">
-                        <time class="insight__date">
-                            28 JANUARY, 2020
+                    <div class="insight-card__bottom">
+                        <time class="insight-card__date">
+                            28 January, 2020
                         </time>
-                        <a class="insight__author" href="#">
-                            BY ADMIN
+                        <a class="insight-card__author" href="#">
+                            By admin
                         </a>
+                    </div>
                     </div>
                 </article>
             </li>
 
             <li class="insights__item">
-                <article class="insight">
-                    <div class="insight__image">
-                        <img class="insight__picture" src="images/content/products/insights3.jpg"
+                <article class="insight-card">
+                    <div class="insight-card__image">
+                        <img class="insight-card__picture" src="images/content/products/insights3.jpg"
                             alt="Rncididunt ut labore et dolore magna aliqua. Ut enim">
-                        <div class="insight__subtitle">
-                            <a href="#" class="insight__link">NEW</a>
+                        <div class="insight-card__subtitle">
+                            <a href="#" class="insight-card__link">New</a>
                         </div>
                     </div>
-                    <h3 class="insight__title">
-                        <a class="insight__title-link" href="#">
+                    <div class="insight-card__content">
+                    <h3 class="insight-card__title">
+                        <a class="insight-card__title-link" href="#">
                             Rncididunt ut labore et dolore magna aliqua. Ut enim
                         </a>
                     </h3>
-                    <div class="insight__bottom">
-                        <time class="insight__date">
-                            28 JANUARY, 2020
+                    <div class="insight-card__bottom">
+                        <time class="insight-card__date">
+                            28 January, 2020
                         </time>
-                        <a class="insight__author" href="#">
-                            BY ADMIN 
+                        <a class="insight-card__author" href="#">
+                            By admin 
                         </a>
 
                     </div>
+                    </div>  
                 </article>
             </li>
         </ul>
@@ -435,9 +440,6 @@
                     </li>
                 </ul>
             </div>
-
-
-
         </div>
     </div>
 </section>
@@ -453,20 +455,20 @@
                 <address class="footer__address">
                     <div class="footer__item footer__item--addres">
                         <span class="footer__connection">Address:</span>
-                        <a class="footer__content" href="#">
+                        <a class="footer__link" href="#">
                             4772 Wines Lane
                             Houston, TX 77032
                         </a>
                     </div>
                     <div class="footer__item">
                         <span class="footer__connection">Telephone:</span>
-                        <a class="footer__content" href="tel:+8323475843">
+                        <a class="footer__link" href="tel:+8323475843">
                             +832-347-5843
                         </a>
                     </div>
                     <div class="footer__item">
                         <span class="footer__connection">Email:</span>
-                        <a class="footer__content" href="mailto:contact@Glee.com">
+                        <a class="footer__link" href="mailto:contact@Glee.com">
                             contact@Glee.com
                         </a>
                     </div>

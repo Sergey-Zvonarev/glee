@@ -1,0 +1,44 @@
+.filter-category {
+    &__label {
+        color: $default;
+        cursor: pointer;
+    }
+
+    &__input {
+
+        &:checked+.filter-category__checkbox {
+            background-color: $search;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1;
+        padding: 14px 26px 14px 14px;
+        background-color: transparent;
+        border-radius: 5px;
+
+        &--brend {
+            &::after {
+                content: '';
+                display: none;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 24px;
+            background-image: url('../images/content/icons/chevron-right.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 5px;
+            height: 10px;
+        }
+    }
+}

@@ -93,6 +93,10 @@ body {
     display: flex;
     justify-content: center;
 
+    @include max-width(414) {
+        flex-wrap: wrap;
+    }
+
     .mixitup-control-active {
         color: #1a1a1a;
     }
@@ -103,8 +107,8 @@ body {
             margin-right: 19px;
         }
 
-        @include max-width(414) {
-            .filter & {
+        .filter & {
+            @include max-width(414) {
                 margin-right: 10px;
             }
         }
@@ -134,10 +138,6 @@ body {
             font-size: 14px;
         }
     }
-
-    @include max-width(414) {
-        flex-wrap: wrap;
-    }
 }
 
 .product-card {
@@ -153,7 +153,6 @@ body {
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     padding: 23px 20px 30px;
     @include dmsans(700);
-
 
     &:hover {
         .navigation {
@@ -195,6 +194,19 @@ body {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        max-width: 120px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+
+    &__content-box {
+        display: none;
+    }
+
+    .star-list {
+        display: none;
     }
 }
 
@@ -220,6 +232,18 @@ body {
         color: $input;
         transition: background-color 0.5s;
 
+        @include max-width(768) {
+            height: 28px;
+            width: 100px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        @include max-width(414) {
+            height: 28px;
+            width: 160px;
+            padding: 5px 10px 5px 10px;
+        }
+
         &::placeholder {
             color: $input;
         }
@@ -233,11 +257,7 @@ body {
             background-color: $accent;
         }
 
-        @include max-width(768) {
-            height: 28px;
-            width: 100px;
-            padding: 5px 10px 5px 10px;
-        }
+
     }
 
     &__btn {
@@ -250,4 +270,640 @@ body {
             padding: 0px 10px 0 10px;
         }
     }
+}
+
+.pagination {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 14px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        padding: 15px 20px;
+        border: 1px solid $link;
+        transition: color 0.5s, background-color 0.5s;
+
+        &--active {
+            background-color: $btn;
+            color: white;
+        }
+
+        &:hover {
+            background-color: $btn;
+            color: white;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__burger {
+        position: relative;
+        z-index: 11;
+        display: none;
+        border: none;
+        font-size: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__link {
+        @include rubik(500);
+        font-size: 15px;
+        color: $link;
+        padding: 2px;
+        transition: color 0.5s, background-color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+        border: transparent;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $default;
+        }
+
+        &:hover {
+            border-bottom: 1px solid $default;
+        }
+
+        &:active {
+            color: $link;
+        }
+    }
+}
+
+.navigation {
+
+    @include max-width(1200) {
+        order: 2;
+    }
+
+    @include max-width(768) {
+        margin-left: auto;
+    }
+
+
+    &__icon {
+        width: 18px;
+        height: 16px;
+        fill: $default;
+
+        &--burger-menu {
+            fill: $bg;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $bg;
+        width: 1px;
+        height: 32px;
+
+        @include max-width(768) {
+            display: none;
+        }
+    }
+
+    &__num {
+        position: absolute;
+
+        top: 8px;
+        right: 29px;
+        width: 15px;
+        height: 15px;
+        background-color: $bg;
+        border-radius: 50%;
+        font-size: 10px;
+        text-align: center;
+        line-height: 1.6;
+
+        @include max-width(768) {
+            background-color: $accent;
+            top: 0;
+            right: 0;
+        }
+
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__box {
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include max-width(768) {
+                margin-right: 0;
+            }
+
+        }
+
+        &--heart-basket {
+            position: relative;
+            display: flex;
+        }
+    }
+
+    &__item {
+
+        @include max-width(768) {
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
+
+        @include max-width(768) {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $accent;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            background-color: $link;
+            transform: scale(1.1);
+            box-shadow: 0 0 5px black;
+
+            .navigation__icon {
+                fill: $accent;
+            }
+        }
+
+        &:active {
+            color: $link;
+        }
+
+        &--search {
+            background-color: $search;
+
+            @include max-width(768) {
+                background-color: transparent;
+            }
+        }
+
+        &--heart {
+            background: $accent;
+            border-radius: 46px 0 0 46px;
+            margin-right: 0;
+            width: 93px;
+
+            @include max-width(768) {
+                width: 35px;
+                background-color: transparent;
+            }
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 46px 0 0 46px;
+
+                @include max-width(768) {
+                    border-radius: 50%;
+                }
+            }
+
+            &:hover {
+                position: relative;
+                z-index: 2;
+
+
+            }
+        }
+
+        &--burgermenu {
+            background-color: $btn;
+
+            @include max-width(768) {
+                background: transparent;
+
+                .navigation__icon {
+                    fill: $default;
+                }
+            }
+
+        }
+
+        &--basket {
+            background-color: $accent;
+            border-radius: 0 46px 46px 0;
+            width: 93px;
+
+            @include max-width(768) {
+                background-color: transparent;
+                width: 35px;
+            }
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 0 46px 46px 0;
+
+                @include max-width(768) {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &__basket-heart {
+        display: flex;
+        position: relative;
+        margin-right: 20px;
+    }
+}
+
+.team-card {
+    width: 370px;
+    height: 386px;
+
+    @include max-width(990) {
+        width: 47%;
+    }
+
+    @include max-width(768) {
+        width: 100%;
+    }
+
+
+    &__picture {
+        height: 320px;
+        width: 370px;
+        object-fit: cover;
+
+        @include max-width(990) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        @include max-width(1200) {
+            font-size: 30px;
+        }
+    }
+
+    &__desc {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 335px;
+        width: 100%;
+        background-color: $bg;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        padding: 20px;
+        margin-top: -35px;
+
+        @include max-width(990) {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        padding-top: 6px;
+    }
+
+    &__name {
+        @include line-clamp(1);
+        @include dmsans(700);
+        font-size: 22px;
+        line-height: 1.2;
+        color: $link;
+    }
+
+    &__text {
+        @include line-clamp(1);
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__social-link {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #f6f6f6;
+        border-radius: 50%;
+        transition: background-color 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            background-color: $accent;
+        }
+
+        &:active {
+            background-color: $btn;
+        }
+
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            background-repeat: no-repeat;
+        }
+
+        &--instagramm {
+            &::before {
+                background-image: url('..//images/content/icons/instagramm.svg');
+            }
+        }
+
+        &--google {
+            &::before {
+                background-image: url('..//images/content/icons/google.svg');
+            }
+        }
+    }
+}
+
+.insight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    overflow: hidden;
+    line-height: 1.4;
+    background-color: $bg;
+    // padding-bottom: 20px;
+
+    &__image {
+        position: relative;
+    }
+
+    &__picture {
+        object-fit: cover;
+        height: 246px;
+        width: 100%;
+
+        @include max-width(1200) {
+            height: 395px;
+        }
+
+        @include max-width(414) {
+            height: 240px;
+        }
+    }
+
+    &__subtitle {
+        margin-left: 26px;
+        margin-top: -11px;
+    }
+
+    &__link {
+        color: $bg;
+        background-color: $btn;
+        font-size: 14px;
+        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
+        text-transform: uppercase;
+
+        @include poppins(700);
+        padding: 6px 30px;
+        border-radius: 15px;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            @extend %hover;
+        }
+
+        &:active {
+            @extend %active;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 30px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        margin-bottom: 10px;
+        // padding: 25px 30px 20px;
+        @include dmsans(500);
+        font-size: 18px;
+        color: $insights;
+        line-height: 1.2;
+        @include line-clamp(2);
+
+    }
+
+    &__title-link {
+        @include line-clamp(3);
+        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $btn;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        @include rubik(400);
+        color: #222933;
+        font-size: 12px;
+        line-height: 2.5;
+        padding-top: 10px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    &__date {
+        position: relative;
+        margin-right: 33px;
+        padding-left: 20px;
+        text-transform: uppercase;
+
+        @include max-width(414) {
+            margin-right: 10px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/content/icons/insights-time.svg');
+            width: 10px;
+            height: 12px;
+        }
+    }
+
+    &__author {
+        position: relative;
+        padding-left: 20px;
+        max-width: 145px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+
+        @include max-width(1200) {
+            max-width: 100%;
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/content/icons/insights-men.svg');
+            width: 10px;
+            height: 12px;
+        }
+    }
+}
+
+.design-card {
+    position: relative;
+
+    width: 370px;
+    height: 245px;
+    background-color: $design;
+    overflow: hidden;
+
+    @include max-width(1200) {
+        width: 100%;
+    }
+
+    @include max-width(768) {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        padding: 35px;
+        @include dmsans(700);
+        max-width: 241px;
+    }
+
+    &__link {
+        color: $title;
+        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $link;
+        }
+    }
+
+    &__title {
+        @include line-clamp(2);
+        font-size: 20px;
+        color: $title;
+        line-height: 1.2;
+        margin-bottom: 9px;
+        width: 100%;
+    }
+
+    &__subtitle {
+        color: $btn;
+    }
+
+    &__image {
+        position: absolute;
+        right: -77px;
+        bottom: 0;
+
+        @include max-width(768) {
+            right: -10px;
+        }
+    }
+
+    &__picture {
+        height: 170px;
+        width: 341px;
+        margin: 0 auto;
+        object-fit: contain;
+
+        @include max-width(768) {
+            width: 250px;
+        }
+    }
+}
+
+.star-list {
+    margin-bottom: 24px;
+    margin-left: -8px;
 }

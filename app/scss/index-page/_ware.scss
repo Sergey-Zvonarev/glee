@@ -1,48 +1,28 @@
-.ware {
+.lamps {
+    display: flex;
+    justify-content: center;
+    max-width: 870px;
+    width: 100%;
+    min-height: 390px;
+    background-color: $orange;
 
-    &__inner {
-        display: flex;
-        justify-content: space-between;
+    @include max-width(1200) {
+        min-height: 300px;
+        padding: 30px 0;
+    }
+
+    &:nth-child(1) {
+        margin-right: 10px;
 
         @include max-width(990) {
-            flex-wrap: wrap;
+            margin: 0 auto;
         }
     }
 
-    &__item {
-        display: flex;
-        justify-content: center;
-        max-width: 870px;
-        width: 100%;
-        min-height: 390px;
-        background-color: $lamps;
+    &:not(:last-child) {
 
-        @include max-width(1200) {
-            min-height: 300px;
-            padding: 30px 0;
-        }
-
-        .ware__inner & {
-            @include max-width(990) {
-                margin-right: 0;
-                max-width: 800px;
-                margin: 0 auto;
-            }
-        }
-
-         &:nth-child(1) {
-            margin-right: 10px;
-
-              @include max-width(990) {
-                 margin: 0 auto;
-              }
-        }
-
-        &:not(:last-child) {
-
-            @include max-width(990) {
-                margin-bottom: 15px;
-            }
+        @include max-width(990) {
+            margin-bottom: 15px;
         }
     }
 
@@ -104,11 +84,17 @@
         @include max-width(768) {
             max-width: 50%;
             width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         &--even {
             margin-top: -15px;
             padding-left: 45px;
+
+            @include max-width(990) {
+                padding-left: 0;
+            }
         }
     }
 
@@ -162,6 +148,27 @@
             text-align: center;
             font-size: 14px;
             padding: 13px 16px 13px 16px;
+        }
+    }
+}
+
+.ware {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include max-width(990) {
+            flex-wrap: wrap;
+        }
+
+        & .lamps {
+            @include max-width(990) {
+                margin-right: 0;
+                max-width: 800px;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
         }
     }
 }
