@@ -23,7 +23,7 @@
     }
 
     &__title {
-        max-width: 400px;
+        max-width: 1050px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -42,43 +42,44 @@
         position: relative;
         @include dmsans(700);
         color: $insights;
-        padding-right: 23px;
-        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 14px;
-            background-image: url('../images/content/icons/chevron-right.svg');
-            transition: background-image 0.5s;
-        }
+        border: transparent;
+        transition: color 0.5s, border 0.5s;
 
         &:focus {
-            @extend %focus;
+            outline: transparent;
+            box-shadow: 0 0 0 1px $default;
         }
 
         &:hover {
             @extend %hover;
 
-            &::after {
-                background-image: url('../images/content/icons/chevron-right-hover.svg');
+            .insights__link-icon {
+                fill: $accent;
             }
         }
 
         &:active {
-            @extend %active;
+            color: $link;
+
+            .insights__link-icon {
+                fill: $link;
+            }
         }
+
+    }
+
+    &__link-icon {
+        fill: #262626;
+        width: 10px;
+        height: 12px;
+        transition: fill 0.5s;
     }
 
     &__inner {
         display: flex;
         justify-content: space-between;
 
-        @include max-width(990) {
+        @include max-width(1200) {
             flex-wrap: wrap;
             max-width: 830px;
             margin: 0 auto;
@@ -90,11 +91,13 @@
         display: flex;
 
         @include max-width(1200) {
-            margin-bottom: 20px;
-            margin-right: 10px;
+
+margin-right: 30px;
+            margin-bottom: 30px;
         }
 
         @include max-width(414) {
+
             margin-right: 0;
         }
     }
@@ -104,3 +107,179 @@
     }
 }
 
+.insight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    overflow: hidden;
+    line-height: 1.4;
+    background-color: $bg;
+
+    @include max-width(768) {
+        max-width: 500px;
+    }
+
+    &__image {
+        position: relative;
+
+        @include max-width(768) {
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+
+    &__picture {
+        object-fit: cover;
+        height: 246px;
+        width: 100%;
+
+        @include max-width(1200) {
+            height: 395px;
+        }
+
+        @include max-width(414) {
+            height: 240px;
+        }
+    }
+
+    &__subtitle {
+        margin-left: 26px;
+        margin-top: -11px;
+    }
+
+    &__link {
+        color: $bg;
+        background-color: $btn;
+        font-size: 14px;
+        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
+        text-transform: uppercase;
+
+        @include poppins(700);
+        padding: 6px 30px;
+        border-radius: 15px;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            @extend %hover;
+        }
+
+        &:active {
+            @extend %active;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 30px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        margin-bottom: 10px;
+        // padding: 25px 30px 20px;
+        @include dmsans(500);
+        font-size: 18px;
+        color: $insights;
+        line-height: 1.2;
+        @include line-clamp(2);
+
+    }
+
+    &__reference {
+        @include line-clamp(3);
+        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $btn;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        @include rubik(400);
+        color: #222933;
+        font-size: 12px;
+        line-height: 2.5;
+        padding-top: 10px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    &__date {
+        position: relative;
+        margin-right: 33px;
+        padding-left: 20px;
+        text-transform: uppercase;
+
+        @include max-width(414) {
+            margin-right: 10px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/content/icons/insights-time.svg');
+            width: 10px;
+            height: 12px;
+        }
+    }
+
+    &__author {
+        position: relative;
+        padding-left: 20px;
+        max-width: 145px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        transition: color 0.5s;
+
+        @include max-width(1200) {
+            max-width: 100%;
+        }
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $btn;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/content/icons/insights-men.svg');
+            width: 10px;
+            height: 12px;
+        }
+    }
+}

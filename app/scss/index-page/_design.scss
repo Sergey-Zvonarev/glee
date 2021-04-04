@@ -1,4 +1,5 @@
 .design {
+    position: relative;
     padding: 43px 0 55px;
 
     @include max-width(768) {
@@ -34,6 +35,87 @@
 
         @include max-width(414) {
             margin-bottom: 80px;
+        }
+    }
+}
+
+.design-card {
+    position: relative;
+
+    width: 370px;
+    height: 245px;
+    background-color: $design;
+    overflow: hidden;
+
+    @include max-width(1200) {
+        width: 100%;
+    }
+
+    @include max-width(768) {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        padding: 35px;
+        @include dmsans(700);
+        max-width: 241px;
+    }
+
+    &__link {
+        color: $title;
+        transition: color 0.5s, background-color 0.5s, outline 0.5s, box-shadow 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $link;
+        }
+    }
+
+    &__title {
+        @include line-clamp(2);
+        font-size: 20px;
+        color: $title;
+        line-height: 1.2;
+        margin-bottom: 9px;
+        width: 100%;
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: 30;
+        color: $btn;
+        max-width: 120px;
+        @include line-clamp(2);
+
+    }
+
+    &__image {
+        position: absolute;
+        right: -77px;
+        bottom: 0;
+
+        @include max-width(768) {
+            right: -10px;
+        }
+    }
+
+    &__picture {
+        height: 170px;
+        width: 341px;
+        margin: 0 auto;
+        object-fit: contain;
+
+        @include max-width(768) {
+            width: 250px;
         }
     }
 }

@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+
+    &__item {
+        margin-right: 14px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        padding: 15px 20px;
+        border: 1px solid $link;
+        transition: color 0.5s, background-color 0.5s;
+
+        &--active {
+            background-color: $btn;
+            color: white;
+        }
+
+        &:hover {
+            background-color: $btn;
+            color: white;
+        }
+    }
+}

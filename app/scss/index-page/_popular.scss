@@ -52,13 +52,11 @@
         }
 
         @include max-width(768) {
-            grid-gap: 30px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        @include max-width(610) {
-            grid-template-columns: repeat(1, 1fr);
-            max-width: 500px;
-        }
     }
 
     &__item {
@@ -116,6 +114,58 @@
             &:active {
                 background-color: $link;
             }
+        }
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+
+    @include max-width(414) {
+        flex-wrap: wrap;
+    }
+
+    .mixitup-control-active {
+        color: #1a1a1a;
+    }
+
+    &__element {
+        &:not(:last-child) {
+            margin-right: 19px;
+
+            @include max-width(414) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__btn {
+        max-width: 145px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        background-color: transparent;
+        border: none;
+        color: $filter-btn;
+        @include dmsans(700);
+        transition: color 0.5s, background-color 0.5s;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $default;
+        }
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            background-color: $default;
+        }
+
+        @include max-width(414) {
+            font-size: 14px;
         }
     }
 }

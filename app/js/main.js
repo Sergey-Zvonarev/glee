@@ -2,37 +2,19 @@ $(function () {
     $('.navigation__btn--burgermenu').on('click', function () {
         $('.product-card').toggleClass('product-card--list')
     })
-    // Липкий header при скроле 
-    // ==================================
-// var header = $('.header__top'),
-// cloneHeader = header.clone();
-// cloneHeader.addClass('header__top--fixed');
-// header.before(cloneHeader);
 
-// $(window).scroll(function () {
-//     console.log($(window).scrollTop());
+    // Клонирвоание класса + липкий heder
+    var header = $('.header');
 
-//     if ($(window).scrollTop() >100) {
-//         cloneHeader.addClass('header__top--scroll');
-//     }
-//     else {
-//          cloneHeader.removeClass('header__top--scroll');
-//     }
-// })
-//======================================
+    $(window).on('scroll', function () {
+        console.log($(window).scrollTop());
 
-// Клонирвоание класса + липкий heder
-var header = $('.header__top');
-
-$(window).scroll(function () {
-    console.log($(window).scrollTop());
-
-    if ($(window).scrollTop() > 100) {
-        header.addClass('header__top--scroll');
-    } else {
-        header.removeClass('header__top--scroll');
-    }
-})
+        if ($(window).scrollTop() > 100) {
+            header.addClass('header--scroll');
+        } else {
+            header.removeClass('header--scroll');
+        }
+    })
 
 
 
@@ -52,8 +34,6 @@ $(window).scroll(function () {
     $('.trendy__slider').slick({
         arrows: false,
         dots: true,
-        // fade: true,
-        // autoplay: true
     });
 
     $('.partners__list').slick({
@@ -62,8 +42,26 @@ $(window).scroll(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        centerMode: false,
-        variableWidth: true
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 414,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 2,
+                    variableWidth: false,
+                }
+            },
+
+        ],
     });
 
     $('.js-popup-youtube').magnificPopup({

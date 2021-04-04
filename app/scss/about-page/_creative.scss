@@ -5,6 +5,14 @@
         padding: 80px 0 90px;
     }
 
+    @include max-width(768) {
+        padding: 80px 0 40px;
+    }
+
+    @include max-width(414) {
+        padding-top: 50px;
+    }
+
     &__inner {
         display: flex;
 
@@ -41,6 +49,7 @@
         padding-left: 20px;
 
         @include max-width(990) {
+            padding-top: 40px;
             width: 100%;
         }
     }
@@ -70,6 +79,10 @@
 
     &__text {
         margin-bottom: 60px;
+
+        @include max-width(990) {
+            margin-bottom: 40px;
+        }
     }
 
     &__title {
@@ -165,5 +178,9 @@
     &__item-desc {
         @include dmsans(700);
         color: #4c4c4c;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 80px;
     }
 }

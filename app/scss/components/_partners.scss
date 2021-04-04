@@ -17,6 +17,13 @@
         padding-bottom: 72px;
     }
 
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 130px;
+    }
+
     &__item {
         margin-left: 40px;
         margin-right: 40px;
@@ -27,17 +34,15 @@
         }
     }
 
-    &__list {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 130px;
-    }
-
     &__picture {
         object-fit: contain;
         width: 167px;
         height: 80px;
+
+        @include max-width(768) {
+            height: 60px;
+            margin: 0 auto;
+        }
 
         @include max-width(414) {
             height: 60px;

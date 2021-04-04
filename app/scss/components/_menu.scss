@@ -1,0 +1,47 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__burger {
+        position: relative;
+        z-index: 11;
+        display: none;
+        border: none;
+        font-size: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__link {
+        @include rubik(500);
+        font-size: 15px;
+        color: $link;
+        padding: 2px;
+        transition: color 0.5s, background-color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+        border: transparent;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $text;
+        }
+
+        &:active {
+            color: $btn;
+        }
+    }
+}

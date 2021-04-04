@@ -2,8 +2,17 @@
     background-color: $accent;
     padding: 84px 0 75px 0;
 
+    @include max-width(768) {
+        padding: 40px 0 40px 0;
+    }
+
     &__mb {
         margin-bottom: 50px;
+
+        @include max-width(990) {
+            margin-bottom: 0;
+        }
+
     }
 
     &__inner {
@@ -76,5 +85,6 @@
 
     &__text {
         color: #4c4c4c;
+        @include line-clamp(1);
     }
 }

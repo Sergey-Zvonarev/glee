@@ -1,5 +1,28 @@
 .header {
-    position: relative;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+
+    &.header--scroll {
+        .header__inner {
+            padding: 10px 0;
+            transition: padding 1s;
+
+            @include max-width(768) {
+                padding: 0;
+            }
+        }
+    }
+
+    &--scroll {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 50;
+        box-shadow: 0 0 20px $default;
+    }
 
     .menu {
         width: 100%;
@@ -29,7 +52,7 @@
                 z-index: 10;
                 top: 0;
                 text-align: center;
-                padding: 115px 0 15px;
+                padding: 90px 0 15px;
                 background-color: $orange;
                 transform: translatey(-200%);
                 transition: transform 0.5s;
@@ -79,31 +102,6 @@
     &__top {
         background-color: $bg;
 
-        &.header__top--scroll {
-            @include max-width(768) {
-                padding: 5px 0;
-            }
-
-            .header__inner {
-                padding: 10px 0;
-                transition: padding 1s;
-
-                @include max-width(768) {
-                    padding: 0;
-                }
-            }
-        }
-
-        &--scroll {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 50;
-            box-shadow: 0 0 20px $default;
-            transition: all 1s;
-        }
-
         @include max-width(768) {
             align-items: center;
             padding: 20px 0;
@@ -115,6 +113,7 @@
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
+        transition: padding 1s;
 
         @include max-width(768) {
             align-items: center;
@@ -133,6 +132,3 @@
         }
     }
 }
-
-
-

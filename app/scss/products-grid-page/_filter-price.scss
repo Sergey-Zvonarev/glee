@@ -1,4 +1,8 @@
 .filter-price {
+    @include max-width(768) {
+        order: 3;
+    }
+    
     .irs--flat .irs-line {
         top: 25px;
         height: 4px;
@@ -18,6 +22,11 @@
         height: 16px;
         background-color: #a3bbc8;
         cursor: pointer;
+        transition: opacity 0.5s;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 
     .irs--flat .irs-handle>i:first-child {

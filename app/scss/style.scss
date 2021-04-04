@@ -4,18 +4,20 @@
 @import 'reset';
 @import 'global';
 @import 'components/components';
-@import 'index-page/index-page';
+@import 'index-page';
 @import 'login-page/modal';
-@import 'about-page/about-page';
-@import 'products-grid-page/products-grid';
+@import 'about-page';
+@import 'products-grid-page';
 
 
+.main {
+    padding-top: 150px;
 
+    @include max-width(768) {
+        padding-top: 100px;
+    }
 
-
-
-
-
-
-
-
+    @include max-width(414) {
+        padding-top: 80px;
+    }
+}
