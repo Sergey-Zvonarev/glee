@@ -174,7 +174,7 @@ function watching() { //функция слежения за файлом
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     // watch(['app/**/*.html']).on('change', browserSync.reload)
     watch(['app/*.html'], html);
-    watch('app/images/content/*', parallel('imagesBuild'));
+    watch('app/images/content/**/*', parallel('imagesBuild'));
     watch('app/images/sprite/*', parallel('svgSprite'));
     watch('app/fonts/*', parallel('fonts'));
 }

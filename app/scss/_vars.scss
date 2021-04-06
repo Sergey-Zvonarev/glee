@@ -49,6 +49,12 @@ $input: #234969;
 }
 
 
+@mixin nunito($weight) {
+    font-family: "Nunito", sans-serif;
+    font-weight: $weight;
+}
+
+
 // ===========КНОПКИ==================
 %hover {
     color: $accent;

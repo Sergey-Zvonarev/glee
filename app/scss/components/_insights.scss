@@ -92,7 +92,7 @@
 
         @include max-width(1200) {
 
-margin-right: 30px;
+            margin-right: 30px;
             margin-bottom: 30px;
         }
 
@@ -210,76 +210,6 @@ margin-right: 30px;
 
         &:active {
             color: $btn;
-        }
-    }
-
-    &__bottom {
-        display: flex;
-        @include rubik(400);
-        color: #222933;
-        font-size: 12px;
-        line-height: 2.5;
-        padding-top: 10px;
-        border-top: 1px solid #e0e0e0;
-    }
-
-    &__date {
-        position: relative;
-        margin-right: 33px;
-        padding-left: 20px;
-        text-transform: uppercase;
-
-        @include max-width(414) {
-            margin-right: 10px;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            background-image: url('../images/content/icons/insights-time.svg');
-            width: 10px;
-            height: 12px;
-        }
-    }
-
-    &__author {
-        position: relative;
-        padding-left: 20px;
-        max-width: 145px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-transform: uppercase;
-        transition: color 0.5s;
-
-        @include max-width(1200) {
-            max-width: 100%;
-        }
-
-        &:focus {
-            @extend %focus;
-        }
-
-        &:hover {
-            color: $link;
-        }
-
-        &:active {
-            color: $btn;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            background-image: url('../images/content/icons/insights-men.svg');
-            width: 10px;
-            height: 12px;
         }
     }
 }
