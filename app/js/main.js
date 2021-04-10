@@ -1,4 +1,75 @@
 $(function () {
+
+    $('.related__list').slick({
+        slidesToShow: 4,
+        infinite: false,
+        prevArrow: '<button type="button" class="slick-prev"><img src="images/content/icons/arrow-left.svg" alt=""></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="images/content/icons/arrow-right.svg" alt=""></button>',
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 414,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            },
+        ],
+    });
+
+    $('.product-tabs__link').on('click', function (e) {
+        e.preventDefault();
+        $('.product-tabs__link').removeClass('product-tabs__link--active');
+        $(this).addClass('product-tabs__link--active');
+
+        $('.product-tabs__item').removeClass('product-tabs__item--active');
+        $($(this).attr('href')).addClass('product-tabs__item--active');
+
+    });
+
+    $('.details-card__number').styler();
+
+    $('.product-slide__min').slick({
+        asNavFor: '.product-slide__big',
+        focusOnSelect: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        vertical: true,
+        draggable: false
+    });
+    $('.product-slide__big').slick({
+        asNavFor: '.product-slide__min',
+        draggable: false,
+        arrows: false,
+        fade: true,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    draggable: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    draggable: true,
+                }
+            },
+
+        ],
+    });
+
     $('.navigation__btn--burgermenu').on('click', function () {
         $('.product-card').toggleClass('product-card--list')
     })
