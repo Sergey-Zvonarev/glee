@@ -1,0 +1,149 @@
+.details-card {
+    &__inner {
+        display: flex;
+
+        @include max-width(990) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__slide {
+        width: 570px;
+        margin-right: 53px;
+
+        @include max-width(990) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__content {
+        width: 570px;
+    }
+
+    &__title {
+        @include rubik(400);
+        overflow: hidden;
+        text-align: left;
+        padding-top: 16px;
+        font-size: 40px;
+        color: #333333;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    &__price {
+        display: inline-block;
+        font-size: 30px;
+        color: #333333;
+        margin-bottom: 12px;
+    }
+
+    .star-list {
+        margin-bottom: 27px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        margin-bottom: 48px;
+
+        @include max-width(414) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        transition: color 0.5s, background-color 0.5s;
+        border: none;
+        padding: 13px 55px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin-left: 12px;
+
+        @include max-width(768) {
+            padding: 13px 40px;
+        }
+
+        @include max-width(414) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .jq-number {
+        position: relative;
+        padding: 0;
+    }
+
+    .jq-number__field {
+        width: 150px;
+        height: 53px;
+        border: 1px solid $btn;
+        transform: translateY(-3%);
+
+        @include max-width(414) {
+            width: 100%;
+        }
+    }
+
+    .jq-number__field input {
+        @include rubik(400);
+        box-sizing: border-box;
+        width: 100%;
+        padding: 7px 9px;
+        font-size: 15px;
+        color: $text;
+        text-align: center;
+        line-height: 2.5;
+        border: transparent;
+    }
+
+    .jq-number__spin {
+        position: absolute;
+        top: 46%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 12px;
+        height: 51px;
+
+    }
+
+    .jq-number__spin.minus {
+        width: 49px;
+        left: 1px;
+        border-right: 1px solid $btn;
+    }
+
+    .jq-number__spin.plus {
+        right: 0;
+        width: 49px;
+        border-left: 1px solid $btn;
+    }
+
+    .jq-number__spin::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 2px;
+        background-color: $default;
+
+    }
+
+    .jq-number__spin.plus::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 48.5%;
+        width: 2px;
+        height: 12px;
+        background-color: $default;
+    }
+}

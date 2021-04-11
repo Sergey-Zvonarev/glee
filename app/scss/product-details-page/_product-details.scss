@@ -1,0 +1,14 @@
+.product-details {
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    @include max-width(768) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include max-width(414) {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+}

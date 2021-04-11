@@ -1,0 +1,133 @@
+.article-blog {
+    &__image {
+        position: relative;
+    }
+
+    &__picture {
+        width: 100%;
+        max-width: 830px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 30px 30px 20px 0;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__reference {
+        @include rubik(400);
+        @include line-clamp(2);
+        color: #333333;
+        font-size: 36px;
+        transition: color 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $btn;
+        }
+    }
+
+    &__text {
+        color: #243f4d;
+        margin-bottom: 30px;
+        max-width: 830px;
+        max-height: 85px;
+        overflow: hidden;
+
+        p {
+            @include line-clamp(3);
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        padding: 16px 83px 16px 20px;
+        border: 1px solid $btn;
+        color: $btn;
+        font-size: 15px;
+        @include nunito(700);
+        transition: color 0.5s, box-shadow 0.5s, background-color 0.5s;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 1px $default;
+        }
+
+        &:hover {
+            color: $accent;
+            background-color: #477b97;
+
+            .article-blog__icon {
+                fill: $accent;
+            }
+        }
+
+        &:active {
+            background-color: $default;
+        }
+
+    }
+
+    &__icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 22px;
+        height: 9px;
+        fill: $btn;
+        transition: fill 0.5s;
+    }
+
+    .blog-user {
+        position: absolute;
+        bottom: 0;
+        background-color: $btn;
+        max-width: 275px;
+        width: 100%;
+        padding: 15px 5px;
+        justify-content: center;
+
+        @include max-width(414) {
+            max-width: 100%;
+        }
+
+        &__date {
+            color: $bg;
+
+        }
+
+        &__author {
+            color: $bg;
+
+            &:focus {
+                @extend %focus;
+            }
+
+            &:hover {
+                color: $link;
+            }
+
+            &:active {
+                color: $text;
+            }
+        }
+
+        &__icon {
+            fill: $bg;
+        }
+    }
+}

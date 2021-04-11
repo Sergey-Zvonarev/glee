@@ -1,0 +1,120 @@
+.related {
+    padding-top: 42px;
+    padding-bottom: 15px;
+
+    .slick-list {
+        padding-left: 45px;
+    }
+
+    .slick-track {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        top: -62px;
+        right: 0;
+        border: 1px solid $btn;
+        padding: 18px 13px;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+
+    .slick-prev {
+        right: 65px;
+    }
+
+    .slick-arrow.slick-disabled {
+        cursor: default;
+        border: 1px solid #edf1f4;
+    }
+
+    &__title {
+        @include dmsans(700);
+        font-size: 36px;
+        margin-bottom: 7px;
+        max-width: 1050px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -23px;
+    }
+
+    &__item {
+        width: 270px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        @include max-width(990) {
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+    }
+
+    &__card {
+        max-width: 270px;
+        width: 100%;
+
+        @include max-width(1200) {
+            margin: 0 auto;
+        }
+    }
+
+    .product-card__image {
+        margin-bottom: 70px;
+
+        @include max-width(990) {
+           margin-bottom: 15px;
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        &__box {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        &__btn {
+            box-shadow: 0 0 5px $default;
+            background-color: $bg;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
+
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 2px $accent;
+                border-radius: 50%;
+            }
+
+            &:hover {
+                background-color: $btn;
+
+                .navigation__icon {
+                    fill: $bg;
+                }
+            }
+
+            &:active {
+                background-color: $link;
+            }
+        }
+    }
+}

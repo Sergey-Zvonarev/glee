@@ -1,0 +1,238 @@
+.blog-details {
+    padding-bottom: 60px;
+
+    &__image {
+        position: relative;
+    }
+
+    &__picture {
+        width: 100%;
+        max-width: 830px;
+        height: 500px;
+        object-fit: cover;
+
+        @include max-width(990) {
+            max-width: 100%;
+        }
+    }
+
+    .blog-user {
+        position: absolute;
+        bottom: 0;
+        background-color: $btn;
+        max-width: 275px;
+        width: 100%;
+        padding: 15px 5px;
+        justify-content: center;
+
+        @include max-width(414) {
+            max-width: 100%;
+        }
+
+        &__date {
+            color: $bg;
+        }
+
+        &__author {
+            color: $bg;
+
+            &:focus {
+                @extend %focus;
+            }
+
+            &:hover {
+                color: $link;
+            }
+
+            &:active {
+                color: $text;
+            }
+        }
+
+        &__icon {
+            fill: $bg;
+        }
+    }
+
+    &__content {
+        padding: 30px 40px 30px 0;
+
+        @include max-width(990) {
+            padding-right: 0;
+        }
+
+        h2 {
+            @include rubik(400);
+            @include line-clamp(2);
+            color: #333333;
+            font-size: 36px;
+            transition: color 0.5s;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            @include rubik(500);
+            color: #243f4d;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .blog-details__subtitle {
+            padding-top: 24px;
+        }
+
+        p {
+            margin-bottom: 34px;
+        }
+
+        blockquote {
+            background-color: #edf1f4;
+            border-left: 6px solid $btn;
+            padding: 20px 90px 20px 35px;
+            margin-bottom: 40px;
+        }
+
+        span {
+            position: relative;
+            display: block;
+            padding-left: 43px;
+            margin-top: 5px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border: 2px solid #a3bbc8;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                height: 3px;
+                width: 20px;
+            }
+        }
+
+        img {
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .article-blog__subtitle {
+        color: #243f4d;
+        @include rubik(500);
+        margin-bottom: 20px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        margin-bottom: 60px;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+
+        @include max-width(414) {
+            flex-direction: column;
+        }
+    }
+
+    &__author {
+        display: flex;
+
+        @include max-width(414) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__author-picture {
+        display: inline-block;
+        width: 76px;
+        height: 76px;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+
+    &__name {
+        @include rubik(500);
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 3px;
+        padding-top: 10px;
+    }
+
+    &__prof {
+        color: #666666
+    }
+
+    &__minbox {
+        max-width: 220px;
+        width: 100%;
+        padding-top: 8px;
+        margin-right: 27px;
+
+        @include max-width(768) {
+            margin-right: 0;
+            width: auto;
+        }
+
+    }
+
+    &__tags {
+        color: #333333;
+    }
+
+    &__tags-link {
+        color: #999999;
+        transition: color 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $text;
+        }
+    }
+
+    &__share {
+        display: flex;
+        align-items: center;
+    }
+
+    &__share-link {
+        display: flex;
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @include max-width(768) {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+    }
+
+    &__share-icon {
+        width: 18px;
+        height: 18px;
+        fill: #999999;
+        transition: fill 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            fill: $link;
+        }
+
+        &:active {
+            fill: $text;
+        }
+    }
+}

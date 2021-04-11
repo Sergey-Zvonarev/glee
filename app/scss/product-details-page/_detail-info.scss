@@ -1,0 +1,36 @@
+.detail-info {
+    &__list {}
+
+    &__item {
+        display: flex;
+    }
+
+    &__title {
+        max-width: 400px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 5px;
+    }
+
+    &__text {
+        max-width: 400px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        a {
+            &:focus {
+                @extend %focus;
+            }
+
+            &:hover {
+                color: $link;
+            }
+
+            &:active {
+                color: $text;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.article-post {
+    display: flex;
+
+    &__link {
+        display: block;
+        margin-right: 20px;
+        min-width: 70px;
+    }
+
+    &__picture {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+
+    &__title {
+        padding-top: 3px;
+    }
+
+    &__link-title {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333333;
+        @include rubik(400);
+        @include line-clamp(2);
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $link;
+        }
+
+        &:active {
+            color: $text;
+        }
+    }
+
+    &__date {
+        position: relative;
+        padding-left: 20px;
+        font-size: 12px;
+        color: #9a9a9a;
+    }
+
+    &__icon {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        fill: #9a9a9a;
+        width: 15px;
+        height: 15px;
+    }
+}
