@@ -91,7 +91,10 @@ function html() {
     return src(['app/*.html', '!app/parts/**/*.html'])
         .pipe(fileInclude({
             prefix: '@@',
-            basepath: '@file'
+            basepath: '@file',
+            context: {
+                arr: []
+            }
         }))
         .pipe(dest('./build'))
         .pipe(browserSync.stream())
@@ -173,7 +176,7 @@ function watching() { //функция слежения за файлом
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     // watch(['app/**/*.html']).on('change', browserSync.reload)
-    watch(['app/*.html'], html);
+    watch(['app/**/*.html'], html);
     watch('app/images/content/**/*', parallel('imagesBuild'));
     watch('app/images/sprite/*', parallel('svgSprite'));
     watch('app/fonts/*', parallel('fonts'));

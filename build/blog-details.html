@@ -109,22 +109,29 @@
     <div class="container">
         <div class="breadcrumbs__inner">
             <div class="breadcrumbs__title">
-                Blog-Details
+                Blog Details
             </div>
 
             <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
+                 <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="#">Home</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">Blog-Details</a>
-                </li>
+                    </li>
+                     <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">Blog</a>
+                    </li>
+                    
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Blog Details</a>
+                    </li>
             </ul>
 
         </div>
     </div>
 </div>
     <section class="blog blog-details">
+    <h2 class="visually-hidden">
+        blog details
+    </h2>
     <div class="container container--min">
         <div class="blog__inner">
             <div class="blog__box">
@@ -132,8 +139,8 @@
                     <div class="blog-details__image">
                         <img src="images/content/blog/blog-1.jpg" alt="Fonsectetur adipisicing eiusmod"
                             class="blog-details__picture">
-                        <div class="blog-user">
-                            <time class="blog-user__date">
+                        <div class="blog-user blog-user--admin">
+                            <time class="blog-user__date" datetime="2020-06-28">
                                 <svg class="blog-user__icon">
                                     <use xlink:href="images/sprite.svg#insights-time"></use>
                                 </svg>
@@ -177,7 +184,7 @@
                             <span>Wiusmod tempor</span>
                         </blockquote>
                         <img src="images/content/blog/blog-one.jpg" alt="Riusmod tempor incididunt">
-                        <h3 class="blog-details__subtitle">
+                        <h3>
                             Riusmod tempor incididunt
                         </h3>
 
@@ -187,7 +194,7 @@
                             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         </p>
 
-                        <h3 class="blog-details__subtitle">
+                        <h3>
                             Kajtsal jervcm eoaspckred
                         </h3>
 
@@ -199,7 +206,8 @@
 
                     <div class="blog-details__box">
                         <div class="blog-details__author">
-                            <img class="blog-details__author-picture" src="images/content/avatar/4.jpg" alt="Mark N. Hernandez">
+                            <img class="blog-details__author-picture" src="images/content/avatar/4.jpg"
+                                alt="Mark N. Hernandez">
                             <div class="blog-details__info">
                                 <div class="blog-details__name">
                                     Mark N. Hernandez
@@ -210,10 +218,16 @@
                             </div>
                         </div>
                         <div class="blog-details__minbox">
-                            <div class="blog-details__tags">
-                                Tags: <a class="blog-details__tags-link" href="#">All</a>, <a
-                                    class="blog-details__tags-link" href="#">Trending</a>
-                            </div>
+                            <ul class="blog-details__list">
+
+                                <li class="blog-details__tags">Tags:</li>
+                                <li class="blog-details__item">
+                                    <a class="blog-details__tags-link" href="#">All</a>,
+                                </li>
+                                <li class="blog-details__item">
+                                    <a class="blog-details__tags-link" href="#">Trending</a>
+                                </li>
+                            </ul>
                             <div class="blog-details__share">
                                 Share:
                                 <a class="blog-details__share-link" href="#">
@@ -223,9 +237,9 @@
                                 </a>
                                 <a class="blog-details__share-link" href="#">
                                     <svg class="blog-details__share-icon">
-                                    <use xlink:href="images/sprite.svg#instagramm"></use>
-                                </svg>
-                            </a>
+                                        <use xlink:href="images/sprite.svg#instagramm"></use>
+                                    </svg>
+                                </a>
                                 <a class="blog-details__share-link" href="#">
                                     <svg class="blog-details__share-icon">
                                         <use xlink:href="images/sprite.svg#google"></use>
@@ -244,84 +258,98 @@
                         <div class="comments__title">
                             3 Comments
                         </div>
-                        <div class="comments__list">
-                            <img class="comments__picture" src="images/content/avatar/1.jpg" alt="Delores G. Roberts">
-                            <div class="comments__content">
-                                <div class="comments__top">
-                                    <div class="comments__name">
-                                        Delores G. Roberts
+                        <ul class="comments__list">
+                            <li class="comments__item">
+                                <img class="comments__picture" src="images/content/avatar/1.jpg"
+                                    alt="Delores G. Roberts">
+                                <div class="comments__content">
+                                    <div class="comments__top">
+                                        <div class="comments__name">
+                                            Delores G. Roberts
+                                        </div>
+                                        <time class="comments__date" datetime="2020-10-11">Add 11 Oct 2020</time>
                                     </div>
-                                    <time class="comments__date">Add 11 Oct 2020</time>
+                                    <div class="comments__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
+                                            massa et
+                                            tristique convallis. Class aptent
+                                            taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                            himenaeos.
+                                            Suspendisse orci sem, ultrices
+                                        </p>
+                                    </div>
+                                    <a class="comments__reply" href="#">
+                                        Reply
+                                        <svg class="comments__icon">
+                                            <use xlink:href="images/sprite.svg#reply"></use>
+                                        </svg>
+                                    </a>
                                 </div>
-                                <p class="comments__text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
-                                    massa et
-                                    tristique convallis. Class aptent
-                                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                                    Suspendisse orci sem, ultrices
-                                </p>
-                                <a class="comments__reply" href="#">
-                                    Reply
-                                    <svg class="comments__icon">
-                                        <use xlink:href="images/sprite.svg#reply"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                            </li>
 
-                        <div class="comments__list">
-                            <img class="comments__picture" src="images/content/avatar/2.jpg" alt="Shannon S. Williams">
-                            <div class="comments__content">
-                                <div class="comments__top">
-                                    <div class="comments__name">
-                                        Shannon S. Williams
+                            <li class="comments__item">
+                                <img class="comments__picture" src="images/content/avatar/2.jpg"
+                                    alt="Shannon S. Williams">
+                                <div class="comments__content">
+                                    <div class="comments__top">
+                                        <div class="comments__name">
+                                            Shannon S. Williams
+                                        </div>
+                                        <time class="comments__date" datetime="2020-10-11">Add 11 Oct 2020</time>
                                     </div>
-                                    <time class="comments__date">Add 11 Oct 2020</time>
+                                    <div class="comments__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
+                                            massa et
+                                            tristique
+                                            convallis. Class aptent
+                                            taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                            himenaeos.
+                                            Suspendisse orci sem,
+                                            ultrices
+                                        </p>
+                                    </div>
+                                    <a class="comments__reply" href="#">
+                                        Reply
+                                        <svg class="comments__icon">
+                                            <use xlink:href="images/sprite.svg#reply"></use>
+                                        </svg>
+                                    </a>
                                 </div>
-                                <p class="comments__text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
-                                    massa et
-                                    tristique
-                                    convallis. Class aptent
-                                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                                    Suspendisse orci sem,
-                                    ultrices
-                                </p>
-                                <a class="comments__reply" href="#">
-                                    Reply
-                                    <svg class="comments__icon">
-                                        <use xlink:href="images/sprite.svg#reply"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                            </li>
 
-                        <div class="comments__list">
-                            <img class="comments__picture" src="images/content/avatar/3.jpg" alt="Nicholas R. Coley">
-                            <div class="comments__content comments__content--border">
-                                <div class="comments__top">
-                                    <div class="comments__name">
-                                        Nicholas R. Coley
+                            <li class="comments__item">
+                                <img class="comments__picture" src="images/content/avatar/3.jpg"
+                                    alt="Nicholas R. Coley">
+                                <div class="comments__content comments__content--border">
+                                    <div class="comments__top">
+                                        <div class="comments__name">
+                                            Nicholas R. Coley
+                                        </div>
+                                        <time class="comments__date" datetime="2020-10-11">Add 11 Oct 2020</time>
                                     </div>
-                                    <time class="comments__date">Add 11 Oct 2020</time>
+                                    <div class="comments__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
+                                            massa et
+                                            tristique
+                                            convallis. Class aptent
+                                            taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                            himenaeos.
+                                            Suspendisse orci sem,
+                                            ultrices
+                                        </p>
+                                    </div>
+                                    <a class="comments__reply" href="#">
+                                        Reply
+                                        <svg class="comments__icon">
+                                            <use xlink:href="images/sprite.svg#reply"></use>
+                                        </svg>
+                                    </a>
                                 </div>
-                                <p class="comments__text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
-                                    massa et
-                                    tristique
-                                    convallis. Class aptent
-                                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                                    Suspendisse orci sem,
-                                    ultrices
-                                </p>
-                                <a class="comments__reply" href="#">
-                                    Reply
-                                    <svg class="comments__icon">
-                                        <use xlink:href="images/sprite.svg#reply"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
 
                         <form class="comments-form" action="#">
                             <div class="comments-form__title">

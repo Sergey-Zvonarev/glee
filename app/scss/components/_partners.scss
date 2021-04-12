@@ -1,16 +1,16 @@
 .partners {
     background-color: $orange;
-    padding-top: 247px;
+    // padding-top: 247px;
     padding-bottom: 48px;
 
-    @include max-width(990) {
-        padding-top: 200px;
-    }
+    // @include max-width(990) {
+    //     padding-top: 200px;
+    // }
 
-    @include max-width(414) {
-        padding-top: 160px;
-        padding-bottom: 40px;
-    }
+    // @include max-width(414) {
+    //     padding-top: 160px;
+    //     padding-bottom: 40px;
+    // }
 
     &--blog {
         padding-top: 48px;

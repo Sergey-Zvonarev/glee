@@ -8,6 +8,10 @@
         max-width: 830px;
         height: 500px;
         object-fit: cover;
+
+        @include max-width(414) {
+            height: 300px;
+        }
     }
 
     &__content {
@@ -15,15 +19,12 @@
     }
 
     &__title {
-        margin-bottom: 10px;
-    }
-
-    &__reference {
         @include rubik(400);
-        @include line-clamp(2);
-        color: #333333;
+        @include line-clamp(1);
+        color: $content;
         font-size: 36px;
         transition: color 0.5s;
+        margin-bottom: 10px;
 
         &:focus {
             @extend %focus;
@@ -93,17 +94,6 @@
     }
 
     .blog-user {
-        position: absolute;
-        bottom: 0;
-        background-color: $btn;
-        max-width: 275px;
-        width: 100%;
-        padding: 15px 5px;
-        justify-content: center;
-
-        @include max-width(414) {
-            max-width: 100%;
-        }
 
         &__date {
             color: $bg;
@@ -111,6 +101,7 @@
         }
 
         &__author {
+
             color: $bg;
 
             &:focus {

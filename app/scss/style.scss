@@ -4,15 +4,14 @@
 @import 'reset';
 @import 'global';
 @import 'components/components';
-@import 'index-page';
+@import 'pages/index-page';
 @import 'login-page/modal';
-@import 'about-page';
-@import 'products-page';
-@import 'blog-page';
-@import 'product-details';
-@import 'blog-details-page';
-
-
+@import 'pages/about-page';
+@import 'pages/products-page';
+@import 'pages/blog-page';
+@import 'pages/product-details-page';
+@import 'pages/blog-details-page';
+@import 'pages/contact-page';
 
 .main {
     padding-top: 150px;

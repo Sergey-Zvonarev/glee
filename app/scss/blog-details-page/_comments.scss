@@ -8,7 +8,7 @@
         margin-bottom: 50px;
     }
 
-    &__list {
+    &__item {
         display: flex;
         margin-bottom: 30px;
 
@@ -16,7 +16,7 @@
             flex-wrap: wrap;
         }
 
-        &:nth-child(odd) {
+        &:nth-child(even) {
             margin-left: 130px;
 
             @include max-width(768) {
@@ -60,6 +60,8 @@
     }
 
     &__name {
+        @include line-clamp(1);
+        max-width: 500px;
         @include rubik(700);
         font-size: 16px;
         color: $link;
@@ -79,11 +81,11 @@
         display: inline-block;
         padding-right: 20px;
         font-size: 14px;
-        transition: color 0.5s, background-color 0.5s, fill 0.5s;
+        transition: color 0.5s, background-color 0.5s, fill 0.5s, outline 0.5s;
 
 
         &:focus {
-            border: 1px solid $default;
+            outline: 1px solid $default;
         }
 
         &:hover {

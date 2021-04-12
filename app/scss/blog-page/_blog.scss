@@ -16,6 +16,7 @@
 
     &__box {
         margin-right: 30px;
+        margin-bottom: 75px;
 
         @include max-width(990) {
             order: 2;
@@ -23,12 +24,12 @@
         }
     }
 
-    &__content {
-        margin-bottom: 75px;
-    }
-
     &__item {
         margin-bottom: 28px;
+
+        &:last-child {
+            margin-top: 75px;
+        }
     }
 
     &__aside {

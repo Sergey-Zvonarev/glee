@@ -1,0 +1,206 @@
+.contact {
+    padding: 100px 0 72px;
+
+    @include max-width(414) {
+        padding: 70px 0 60px;
+    }
+
+    &__top {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__subtitle {
+        @include poppins(700);
+        color: $btn;
+        line-height: 1.3;
+    }
+
+    &__title {
+        @include dmsans(700);
+        font-size: 35px;
+        color: $link;
+        line-height: 1.6;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+
+        @include max-width(990) {
+            flex-wrap: wrap;
+        }
+
+        @include max-width(768) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__item {
+        max-width: 370px;
+        height: 385px;
+        width: 100%;
+        background-color: #fbfbfb;
+        padding: 30px;
+        text-align: center;
+        outline: transparent;
+        transition: outline 0.5s;
+
+        @include max-width(990) {
+            max-width: 49%;
+            margin-bottom: 20px;
+        }
+
+        @include max-width(414) {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include max-width(990) {
+                margin-right: 0;
+            }
+        }
+
+        &:hover {
+            outline: 4px solid $btn;
+
+            .contact__icon-svg {
+                background-color: $btn;
+            }
+
+            .contact__icon {
+                fill: $bg;
+            }
+
+        }
+    }
+
+    &__item-title {
+        position: relative;
+        @include line-clamp(1);
+        @include dmsans(700);
+        font-size: 20px;
+        line-height: 1.3;
+        padding-top: 186px;
+        color: #222222;
+        margin-bottom: 15px;
+    }
+
+    &__icon-svg {
+        position: absolute;
+        top: 46px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 80px;
+        background-color: $bg;
+        border-radius: 15px;
+        transition: background-color 0.5s;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 45px;
+        fill: $btn;
+        transition: fill 0.5s;
+    }
+
+    &__text {
+        @include line-clamp(2);
+        max-width: 270px;
+        margin: 0 auto;
+        color: #565872;
+    }
+
+    &__link {
+        transition: color 0.5s;
+
+        &:focus {
+            @extend %focus;
+        }
+
+        &:hover {
+            color: $btn;
+        }
+
+        &:active {
+            color: $btn;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include max-width(768) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .comments-form {
+        padding-top: 0;
+        max-width: 620px;
+        width: 100%;
+        margin-right: 50px;
+
+        @include max-width(768) {
+            margin-right: 0;
+            max-width: 100%;
+            margin-bottom: 70px;
+        }
+
+
+        &__label {
+            &--comment {
+                margin-bottom: 93px;
+
+                @include max-width(768) {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        &__name,
+        &__email,
+        &__textarea {
+            color: $default;
+            background-color: #fafafa;
+            border: none;
+            text-transform: uppercase;
+            transition: outline 0.5s, background-color 0.5s;
+
+            &:focus {
+                outline: 2px solid $btn;
+            }
+
+            &:hover {
+                background-color: $search;
+            }
+
+            &:active {
+                background-color: $btn;
+            }
+        }
+
+        &__btn {
+            border-radius: 5px;
+        }
+    }
+}
+
+#map {
+    width: 500px;
+    height: 335px;
+
+    @include max-width(768) {
+        width: 100%;
+    }
+}

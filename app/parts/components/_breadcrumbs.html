@@ -6,12 +6,13 @@
             </div>
 
             <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">Home</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">@@breadcrumbs-name</a>
-                </li>
+                @@for (var i = 0; i < arr.length; i++) { <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">`+arr[i]+`</a>
+                    </li>
+                    }
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">@@breadcrumbs-name</a>
+                    </li>
             </ul>
 
         </div>

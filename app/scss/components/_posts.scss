@@ -9,9 +9,12 @@
     }
 
     &__title {
-        @include line-clamp(1);
-        display: inline-block;
         position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 330px;
         @include dmsans(700);
         font-size: 18px;
         text-transform: uppercase;

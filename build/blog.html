@@ -113,29 +113,31 @@
             </div>
 
             <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
+                 <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="#">Home</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">Blog</a>
-                </li>
+                    </li>
+                    
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Blog</a>
+                    </li>
             </ul>
 
         </div>
     </div>
 </div>
     <section class="blog">
+    <h2 class="visually-hidden">
+        blog post
+    </h2>
     <div class="container container--min">
         <div class="blog__inner">
-            <div class="blog__box">
-                <ul class="blog__content">
-
+            <ul class="blog__box">
                     <li class="blog__item">
                         <article class="article-blog">
                             <div class="article-blog__image">
                                 <img src="images/content/blog/blog-1.jpg" alt="Fonsectetur adipisicing eiusmod"
                                     class="article-blog__picture">
-                                <div class="blog-user">
+                                <div class="blog-user blog-user--admin">
                                     <time class="blog-user__date">
                                         <svg class="blog-user__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -152,11 +154,11 @@
                                 </div>
                             </div>
                             <div class="article-blog__content">
-                                <h2 class="article-blog__title">
-                                    <a class="article-blog__reference" href="#">
+                                <a class="article-blog__reference" href="#">
+                                    <h3 class="article-blog__title">
                                         Fonsectetur adipisicing eiusmod
-                                    </a>
-                                </h2>
+                                    </h3>
+                                </a>
                                 <div class="article-blog__text">
                                     <p>
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -183,7 +185,7 @@
                             <div class="article-blog__image">
                                 <img src="images/content/blog/blog-2.jpg" alt="Fonsectetur adipisicing elit"
                                     class="article-blog__picture">
-                                <div class="blog-user">
+                                <div class="blog-user blog-user--admin">
                                     <time class="blog-user__date">
                                         <svg class="blog-user__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -200,11 +202,11 @@
                                 </div>
                             </div>
                             <div class="article-blog__content">
-                                <h2 class="article-blog__title">
-                                    <a class="article-blog__reference" href="#">
+                                <a class="article-blog__reference" href="#">
+                                    <h3 class="article-blog__title">
                                         Fonsectetur adipisicing elit
-                                    </a>
-                                </h2>
+                                    </h3>
+                                </a>
                                 <div class="article-blog__text">
                                     <p>
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -232,7 +234,7 @@
                             <div class="article-blog__image">
                                 <img src="images/content/blog/blog-3.jpg" alt="Fsectetur adipisicing tempor incididunt"
                                     class="article-blog__picture">
-                                <div class="blog-user">
+                                <div class="blog-user blog-user--admin">
                                     <time class="blog-user__date">
                                         <svg class="blog-user__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -249,11 +251,11 @@
                                 </div>
                             </div>
                             <div class="article-blog__content">
-                                <h2 class="article-blog__title">
-                                    <a class="article-blog__reference" href="#">
+                                <a class="article-blog__reference" href="#">
+                                    <h3 class="article-blog__title">
                                         Fsectetur adipisicing tempor incididunt
-                                    </a>
-                                </h2>
+                                    </h3>
+                                </a>
                                 <div class="article-blog__text">
                                     <p>
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -281,7 +283,7 @@
                             <div class="article-blog__image">
                                 <img src="images/content/blog/blog-4.jpg" alt="vonsectetur adipisicing elit"
                                     class="article-blog__picture">
-                                <div class="blog-user">
+                                <div class="blog-user blog-user--admin">
                                     <time class="blog-user__date">
                                         <svg class="blog-user__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -298,11 +300,11 @@
                                 </div>
                             </div>
                             <div class="article-blog__content">
-                                <h2 class="article-blog__title">
-                                    <a class="article-blog__reference" href="#">
+                                <a class="article-blog__reference" href="#">
+                                    <h3 class="article-blog__title">
                                         Vonsectetur adipisicing elit
-                                    </a>
-                                </h2>
+                                    </h3>
+                                </a>
                                 <div class="article-blog__text">
                                     <p>
                                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -324,24 +326,25 @@
                             </div>
                         </article>
                     </li>
-                </ul>
 
-                <ul class="pagination">
-                    <li class="pagination__item">
-                        <a class="pagination__link pagination__link--active" href="#">1</a>
+                    <li class="blog__item">
+                        <ul class="pagination">
+                            <li class="pagination__item">
+                                <a class="pagination__link pagination__link--active" href="#">1</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">2</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">3</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">Next</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">2</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">3</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a class="pagination__link" href="#">Next</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="blog__aside">
+            </ul>
+            <aside class="blog__aside">
                 <form class="blog-search blog__search" action="#">
                     <label class="blog-search__label">
                         <span class="visually-hidden">search bar</span>
@@ -353,7 +356,6 @@
                             <use xlink:href="images/sprite.svg#icon-search"></use>
                         </svg>
                     </button>
-                    </label>
                 </form>
                 <div class="filter-category blog__category">
                     <div class="catalog-grid__title">Category</div>
@@ -396,7 +398,7 @@
                     </form>
                 </div>
 
-                <aside class="posts">
+                <div class="posts">
                     <div class="posts__title">Recent posts</div>
                     <ul class="posts__list">
                         <li class="posts__item">
@@ -406,11 +408,11 @@
                                         alt="Corem ipsum dolor tetur adipisicing elit">
                                 </a>
                                 <div class="article-post__content">
-                                    <h3 class="article-post__title">
-                                        <a class="article-post__link-title" href="#">
+                                    <a class="article-post__link-title" href="#">
+                                        <h3 class="article-post__title">
                                             Corem ipsum dolor tetur adipisicing elit
-                                        </a>
-                                    </h3>
+                                        </h3>
+                                    </a>
                                     <time class="article-post__date" datetime="2020-06-28">
                                         <svg class="article-post__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -428,11 +430,11 @@
                                         alt="Fdipisicing elit, sed do eiusmod tempor">
                                 </a>
                                 <div class="article-post__content">
-                                    <h3 class="article-post__title">
-                                        <a class="article-post__link-title" href="#">
+                                    <a class="article-post__link-title" href="#">
+                                        <h3 class="article-post__title">
                                             Fdipisicing elit, sed do eiusmod tempor
-                                        </a>
-                                    </h3>
+                                        </h3>
+                                    </a>
                                     <time class="article-post__date" datetime="2020-06-28">
                                         <svg class="article-post__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -450,11 +452,11 @@
                                         alt="Eonsectetur adipisicing elit, sed do eiusmod ">
                                 </a>
                                 <div class="article-post__content">
-                                    <h3 class="article-post__title">
-                                        <a class="article-post__link-title" href="#">
+                                    <a class="article-post__link-title" href="#">
+                                        <h3 class="article-post__title">
                                             Eonsectetur adipisicing elit, sed do eiusmod
-                                        </a>
-                                    </h3>
+                                        </h3>
+                                    </a>
                                     <time class="article-post__date" datetime="2020-06-28">
                                         <svg class="article-post__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -472,11 +474,11 @@
                                         alt="Gnim ad minim veniam, quis nostrud ">
                                 </a>
                                 <div class="article-post__content">
-                                    <h3 class="article-post__title">
-                                        <a class="article-post__link-title" href="#">
+                                    <a class="article-post__link-title" href="#">
+                                        <h3 class="article-post__title">
                                             Gnim ad minim veniam, quis nostrud
-                                        </a>
-                                    </h3>
+                                        </h3>
+                                    </a>
                                     <time class="article-post__date" datetime="2020-06-28">
                                         <svg class="article-post__icon">
                                             <use xlink:href="images/sprite.svg#insights-time"></use>
@@ -488,7 +490,7 @@
                         </li>
 
                     </ul>
-                </aside>
+                </div>
             </div>
         </div>
     </div>

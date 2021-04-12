@@ -103,7 +103,17 @@
     }
 
     &__partners {
+        padding-top: 247px;
         margin-top: -170px;
+
+        @include max-width(990) {
+            padding-top: 200px;
+        }
+
+        @include max-width(414) {
+            padding-top: 160px;
+            padding-bottom: 40px;
+        }
     }
 }
 

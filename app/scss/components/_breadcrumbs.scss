@@ -46,6 +46,7 @@
         font-size: 14px;
         line-height: 1.7;
         color: inherit;
+        transition: color 0.5s, box-shadow 0.5s;
 
         &:focus {
             outline: transparent;
@@ -56,8 +57,8 @@
             color: $btn;
         }
 
-         &:active {
-             color: $link;
-         }
+        &:active {
+            color: $link;
+        }
     }
 }
