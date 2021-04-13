@@ -3,6 +3,14 @@
     max-width: 485px;
     margin: 0 auto;
 
+    @include max-width(768) {
+        max-width: 100%;
+    }
+
+    @include max-width(414) {
+        padding: 70px 0;
+    }
+
     &__label {
         display: block;
         margin-bottom: 25px;
@@ -13,6 +21,10 @@
             justify-content: space-between;
             padding-bottom: 25px;
             border-bottom: 1px solid $search;
+
+            @include max-width(414) {
+                flex-wrap: wrap;
+            }
         }
     }
 
@@ -30,6 +42,8 @@
         padding: 18px;
         border: 1px solid $btn;
         background-color: transparent;
+        text-align: center;
+        transition: color 0.5s, background-color 0.5s;
 
         &:focus {
             @extend %focus;
@@ -68,6 +82,10 @@
         }
     }
 
+    &__inner {
+        margin-right: 30px;
+    }
+
     &__btn {
         display: block;
         width: 100%;
@@ -78,6 +96,8 @@
         @include rubik(500);
         color: #fffefe;
         margin-bottom: 23px;
+        transition: color 0.5s,
+            background-color 0.5s;
 
         &:focus {
             @extend %focus;
