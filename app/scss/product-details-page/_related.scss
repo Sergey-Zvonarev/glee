@@ -2,10 +2,6 @@
     padding-top: 42px;
     padding-bottom: 15px;
 
-    .slick-list {
-        padding-left: 45px;
-    }
-
     .slick-track {
         padding-top: 35px;
         padding-bottom: 35px;
@@ -44,26 +40,42 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        margin-left: -23px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 
     &__item {
         width: 270px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
 
         @include max-width(990) {
-          margin-left: 8px;
-          margin-right: 8px;
+            margin-left: 8px;
+            margin-right: 8px;
         }
     }
 
     &__card {
-        max-width: 270px;
-        width: 100%;
+        width: 270px;
 
         @include max-width(1200) {
             margin: 0 auto;
+        }
+    }
+
+    .product-card {
+        box-shadow: 0 0 20px 1px rgba(37, 37, 37, 0.05);
+
+        @include max-width(990) {
+            width: 100%;
+        }
+
+        @include max-width(768) {
+            width: 80%;
+        }
+
+        @include max-width(414) {
+            width: 100%;
         }
     }
 
@@ -71,50 +83,7 @@
         margin-bottom: 70px;
 
         @include max-width(990) {
-           margin-bottom: 15px;
-        }
-    }
-
-    .navigation {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        opacity: 0;
-        transition: opacity 0.5s;
-
-        &__box {
-            &:not(:last-child) {
-                margin-right: 16px;
-            }
-        }
-
-        &__btn {
-            box-shadow: 0 0 5px $default;
-            background-color: $bg;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            transition: color 0.5s, background-color 0.5s, fill 0.5s, transform 0.5s, box-shadow 0.5s;
-
-            &:focus {
-                outline: transparent;
-                box-shadow: 0 0 0 2px $accent;
-                border-radius: 50%;
-            }
-
-            &:hover {
-                background-color: $btn;
-
-                .navigation__icon {
-                    fill: $bg;
-                }
-            }
-
-            &:active {
-                background-color: $link;
-            }
+            margin-bottom: 15px;
         }
     }
 }

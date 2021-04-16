@@ -30,6 +30,7 @@
 
         @include max-width(990) {
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         @include max-width(768) {
@@ -44,11 +45,10 @@
         background-color: #fbfbfb;
         padding: 30px;
         text-align: center;
-        outline: transparent;
-        transition: outline 0.5s;
+        border: 3px solid transparent;
+        transition: border 0.5s;
 
         @include max-width(990) {
-            max-width: 49%;
             margin-bottom: 20px;
         }
 
@@ -61,18 +61,24 @@
             margin-right: 30px;
 
             @include max-width(990) {
+                margin-right: 10px;
+            }
+
+            @include max-width(414) {
                 margin-right: 0;
+                padding: 20px;
+                height: 330px;
             }
         }
 
         &:hover {
-            outline: 4px solid $btn;
+            border: 3px solid $btn;
 
-            .contact__icon-svg {
+            .contact__icon {
                 background-color: $btn;
             }
 
-            .contact__icon {
+            .contact__svg {
                 fill: $bg;
             }
 
@@ -90,7 +96,7 @@
         margin-bottom: 15px;
     }
 
-    &__icon-svg {
+    &__icon {
         position: absolute;
         top: 46px;
         left: 50%;
@@ -102,7 +108,7 @@
         transition: background-color 0.5s;
     }
 
-    &__icon {
+    &__svg {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -183,10 +189,6 @@
 
             &:hover {
                 background-color: $search;
-            }
-
-            &:active {
-                background-color: $btn;
             }
         }
 

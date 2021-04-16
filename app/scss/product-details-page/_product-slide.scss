@@ -6,7 +6,7 @@
         margin-right: 30px;
         cursor: pointer;
 
-        @include max-width(1200) {
+        @include max-width(768) {
             display: none;
         }
 
@@ -36,6 +36,11 @@
         width: 390px;
         margin: 0 auto;
 
+        @include max-width(768) {
+            width: 100%;
+        }
+
+
         img {
             width: 233px;
             height: 555px;
@@ -48,8 +53,15 @@
         }
     }
 
-    &__image {
+    &__big-item {
         border: 1px solid #f2f2f2;
+
+        @include max-width(768) {
+            width: 420px;
+        }
+    }
+
+    &__image {
         width: 390px;
         height: 555px;
 

@@ -6,23 +6,24 @@
         <form class="modal__form" action="#">
             <label class="modal__label">
                 Username or email address *
-                <input class="modal__input" type="text" required>
+                <input class="modal__input" type="text" name="email" required>
             </label>
             <label class="modal__label">
                 Password *
-                <input class="modal__input" type="password" required>
+                <input class="modal__input" type="password" name="password" required>
             </label>
             <button class="modal__btn" type="submit">
                 Login
             </button>
-            <label class="modal__label modal__label--border">
-                <div class="modal__inner">
-                    <input class="modal__checkbox" type="checkbox">
-                    Remember me
-                </div>
-
+            <div class="modal__password">
+                <label class="modal__label modal__label--border">
+                    <div class="modal__inner">
+                        <input class="modal__checkbox" type="checkbox">
+                        Remember me
+                    </div>
+                </label>
                 <a class="modal__error" href="#">Lost your password?</a>
-            </label>
+            </div>
 
             <div class="modal__registred">
                 Not registered? No problem

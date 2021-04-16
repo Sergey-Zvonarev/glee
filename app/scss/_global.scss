@@ -164,6 +164,7 @@ body {
         width: 18px;
         height: 16px;
         fill: $default;
+        transition: fill 0.5s;
 
         &--burger-menu {
             fill: $bg;
@@ -265,6 +266,7 @@ body {
 
             .navigation__icon {
                 fill: $accent;
+                transition: fill 0.5s;
             }
         }
 
@@ -349,6 +351,60 @@ body {
         position: relative;
         margin-right: 20px;
     }
+}
+
+.navigation-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    .navigation__box {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    .navigation__btn {
+        box-shadow: 0 0 5px $default;
+        background-color: $bg;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        transition: color 0.5s,
+            background-color 0.5s,
+            fill 0.5s,
+            transform 0.5s,
+            box-shadow 0.5s,
+            outline 0.5s;
+
+        &:focus {
+            outline: transparent;
+            box-shadow: 0 0 0 2px $accent;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            background-color: $btn;
+
+            .navigation__icon {
+                fill: $bg;
+            }
+        }
+
+        &:active {
+            background-color: $link;
+        }
+    }
+
+    .navigation__icon {
+        fill: $btn;
+        transition: fill 0.5s;
+    }
+
 }
 
 .blog-user {

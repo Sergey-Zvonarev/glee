@@ -27,7 +27,7 @@
         padding-right: 20px;
 
         &:last-child {
-            color: $input;
+            color: $btn;
             padding-right: 0;
 
             &::after {
@@ -40,25 +40,29 @@
             position: absolute;
             right: 6px;
         }
-    }
 
-    &__link {
-        font-size: 14px;
-        line-height: 1.7;
-        color: inherit;
-        transition: color 0.5s, box-shadow 0.5s;
-
-        &:focus {
-            outline: transparent;
-            box-shadow: 0 0 0 1px $default;
+        a {
+            font-size: 14px;
+            line-height: 1.7;
+            color: inherit;
+            transition: color 0.5s, box-shadow 0.5s;
+        
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 0 1px $default;
+            }
+        
+            &:hover {
+                color: $btn;
+            }
+        
+            &:active {
+                color: $link;
+            }
         }
 
-        &:hover {
-            color: $btn;
-        }
-
-        &:active {
-            color: $link;
+        span {
+            font-size: 14px;
         }
     }
 }

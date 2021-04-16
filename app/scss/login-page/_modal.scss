@@ -11,10 +11,15 @@
         padding: 70px 0;
     }
 
+    &__password {
+        display: flex;
+        justify-content: space-between;
+        color: $link;
+    }
+
     &__label {
         display: block;
         margin-bottom: 25px;
-        color: $link;
 
         &--border {
             display: flex;
@@ -26,6 +31,10 @@
                 flex-wrap: wrap;
             }
         }
+    }
+
+    &__inner {
+        cursor: pointer;
     }
 
     &__registred {

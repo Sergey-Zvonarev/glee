@@ -22,8 +22,8 @@
     }
 
     &__title {
+        @include line-clamp(2);
         @include rubik(400);
-        overflow: hidden;
         text-align: left;
         padding-top: 16px;
         font-size: 40px;
@@ -44,6 +44,7 @@
     }
 
     &__text {
+        @include line-clamp(5);
         margin-bottom: 30px;
     }
 

@@ -13,14 +13,14 @@ $(function () {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 990,
                 settings: {
                     slidesToShow: 2,
                     arrows: false,
                 }
             },
             {
-                breakpoint: 414,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     arrows: false,
@@ -53,6 +53,7 @@ $(function () {
         asNavFor: '.product-slide__min',
         draggable: false,
         arrows: false,
+        swipe: false, //запретить пролистывать слйд
         fade: true,
         responsive: [{
                 breakpoint: 1200,
@@ -64,6 +65,7 @@ $(function () {
                 breakpoint: 768,
                 settings: {
                     draggable: true,
+                    swipe: true,
                 }
             },
 
@@ -78,7 +80,7 @@ $(function () {
     var header = $('.header');
 
     $(window).on('scroll', function () {
-        console.log($(window).scrollTop());
+        // console.log($(window).scrollTop());
 
         if ($(window).scrollTop() > 100) {
             header.addClass('header--scroll');
@@ -166,17 +168,20 @@ $(function () {
         $('.menu__burger').toggleClass('menu__burger--active');
     });
 
-    let mixerPopular = mixitup('.popular__content', {
-        selectors: {
-            control: '.js-popular-btn'
-        }
-    });
+    if ($('.popular__content').length) {
+        let mixerPopular = mixitup('.popular__content', {
+            selectors: {
+                control: '.js-popular-btn'
+            }
+        });
+    }
 
-    let mixerDesign = mixitup('.design__inner', {
-        selectors: {
-            control: '.js-design-btn'
-        }
-    });
-
+    if ($('.design__inner').length) {
+        let mixerDesign = mixitup('.design__inner', {
+            selectors: {
+                control: '.js-design-btn'
+            }
+        });
+    }
 
 });
